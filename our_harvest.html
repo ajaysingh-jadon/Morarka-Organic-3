@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Harvest & Farmers | Morarka Organic</title>
+    <meta name="description"
+        content="Meet our farming community and discover our sustainable harvest - the heart of Morarka Organic's commitment to ethical agriculture.">
+    <meta name="keywords"
+        content="Morarka farmers, organic harvest, sustainable farming, Indian agriculture, farmer empowerment, organic produce">
+    <meta name="author" content="Morarka Organic">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/odometer.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/textanimation.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/fonts.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo1.png">
+
+    <style>
+        /* Premium Harvest & Farmers Page */
+        .harvest-farmers-page {
+            background: var(--White);
+            overflow-x: hidden;
+        }
+
+        /* Hero Stats Section */
+        .hero-stats-section {
+            background: var(--Primary);
+            color: var(--White);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/patterns/grain-pattern.png') center/contain;
+            opacity: 0.08;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .hero-stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .hero-stat-card::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stat-card:last-child::after {
+            display: none;
+        }
+
+        .hero-stat-number {
+            font-size: 52px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1;
+
+        }
+
+        .hero-stat-text {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        /* Premium Section Styling */
+        .premium-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .premium-section.light-bg {
+            background: #fafafa;
+        }
+
+        .premium-section.dark-bg {
+            background: var(--Primary);
+            color: var(--White);
+        }
+
+        .section-header-premium {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-badge-premium {
+            display: inline-block;
+            color: var(--Secondary);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-badge-premium::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--Secondary);
+        }
+
+        .section-title-premium {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 30px;
+
+            line-height: 1.2;
+        }
+
+        .section-title-premium.dark {
+            color: var(--White);
+        }
+
+        .section-subtitle-premium {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .section-subtitle-premium.dark {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Premium Content Card */
+        .premium-content-card {
+            background: var(--White);
+            border-radius: 24px;
+            padding: 80px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 35px 80px rgba(13, 64, 28, 0.1);
+        }
+
+        .premium-content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--Primary), var(--Secondary));
+        }
+
+        .card-header-premium {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .card-icon-premium {
+            width: 100px;
+            height: 100px;
+            background: var(--Primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .premium-content-card:hover .card-icon-premium {
+            background: var(--Secondary);
+            transform: rotate(15deg);
+        }
+
+        .card-icon-premium i {
+            font-size: 40px;
+            color: var(--White);
+        }
+
+        .card-title-premium {
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--Text-2);
+            margin: 0;
+            padding-top: 25px;
+
+            line-height: 1.3;
+        }
+
+        .card-title-premium.dark {
+            color: var(--White);
+        }
+
+        .content-text-premium {
+            font-size: 19px;
+            line-height: 1.9;
+            color: var(--Text);
+            margin-bottom: 30px;
+            letter-spacing: 0.3px;
+        }
+
+        .content-text-premium:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-text-premium.dark {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .highlight-premium {
+            color: var(--Primary);
+            font-weight: 500;
+            background: transparent;
+            padding: 0;
+            border-bottom: 2px solid rgba(13, 64, 28, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-premium:hover {
+            background: rgba(13, 64, 28, 0.15);
+        }
+
+        .highlight-premium.dark {
+            color: var(--Secondary);
+            background: rgba(248, 195, 44, 0.15);
+        }
+
+        .highlight-premium.dark:hover {
+            background: rgba(248, 195, 44, 0.25);
+        }
+
+        /* Farmers Journey Timeline */
+        .journey-timeline {
+            margin-top: 80px;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .timeline-card {
+            background: var(--White);
+            border-radius: 20px;
+            padding: 50px 40px;
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(13, 64, 28, 0.1);
+            border-color: var(--Secondary);
+        }
+
+        .timeline-step {
+            width: 60px;
+            height: 60px;
+            background: var(--Primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--White);
+            font-size: 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover .timeline-step {
+            background: var(--Secondary);
+            transform: scale(1.1);
+        }
+
+        .timeline-title {
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--Text-2);
+            margin-bottom: 20px;
+
+        }
+
+        .timeline-desc {
+            color: var(--Text);
+            line-height: 1.7;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            margin-top: 100px;
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .product-category {
+            background: var(--White);
+            border-radius: 20px;
+            padding: 50px 40px;
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(13, 64, 28, 0.1);
+            border-color: var(--Secondary);
+        }
+
+        .product-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .product-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--Primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            transition: all 0.3s ease;
+        }
+
+        .product-category:hover .category-icon {
+            background: var(--Secondary);
+            transform: rotate(15deg);
+        }
+
+        .category-icon i {
+            font-size: 36px;
+            color: var(--White);
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--Text-2);
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        .category-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .category-item {
+            background: rgba(13, 64, 28, 0.08);
+            color: var(--Primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .product-category:hover .category-item {
+            background: rgba(13, 64, 28, 0.15);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 100px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+            padding: 40px 30px 30px;
+            color: var(--White);
+
+
+        }
+
+
+        .gallery-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--Secondary);
+
+        }
+
+        .gallery-desc {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .harvest-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--Primary), #1a522c);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .harvest-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/patterns/leaf-pattern-white.png') center/contain;
+            opacity: 0.1;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: var(--White);
+
+        }
+
+        .cta-text {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--Secondary);
+            color: var(--Primary);
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--Secondary);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--Secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .premium-content-card {
+                padding: 70px 60px;
+            }
+
+            .hero-stat-number {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .section-title-premium,
+            .cta-title {
+                font-size: 42px;
+            }
+
+            .card-title-premium {
+                font-size: 32px;
+            }
+
+            .premium-content-card {
+                padding: 60px 50px;
+            }
+
+            .card-header-premium {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .card-icon-premium {
+                margin: 0 auto;
+            }
+
+            .hero-stat-card::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .premium-section {
+                padding: 80px 0;
+            }
+
+            .section-title-premium,
+            .cta-title {
+                font-size: 36px;
+            }
+
+            .section-subtitle-premium,
+            .cta-text {
+                font-size: 18px;
+            }
+
+            .premium-content-card {
+                padding: 50px 40px;
+            }
+
+            .timeline-grid,
+            .product-categories,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .journey-timeline,
+            .product-showcase {
+                margin-top: 60px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .section-title-premium,
+            .cta-title {
+                font-size: 32px;
+            }
+
+            .premium-content-card {
+                padding: 40px 30px;
+            }
+
+            .hero-stat-number {
+                font-size: 42px;
+            }
+
+            .hero-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body class="harvest-farmers-page">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header will be loaded via JavaScript -->
+        <div id="site-header"></div>
+        <!-- Title -->
+        <div class="page-title page-our-history">
+            <div class="rellax" data-rellax-speed="5">
+                <img class="" src="images/item/flower.jpg" alt="">
+            </div>
+            <div class="content-wrap">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="content">
+                                <p class="sub-title">
+                                     nurtured by tradition and guided by organic principles
+                                </p>
+                                <h1 class="title">
+                                    Our Harvest
+                                </h1>
+                                <div class="icon-img">
+                                    <img src="images/item/line-throw-title.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-item item-2">
+                <img src="images/item/grass.png" alt="">
+            </div>
+        </div>
+
+        <!-- Hero Stats Section -->
+        <!-- <section class="hero-stats-section">
+            <div class="stats-container">
+                <div class="hero-stats-grid">
+                    <div class="hero-stat-card wow fadeInUp">
+                        <div class="hero-stat-number odometer" data-count="170">0</div>
+                        <div class="hero-stat-text">Certified Products</div>
+                    </div>
+                    <div class="hero-stat-card wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="hero-stat-number odometer" data-count="100000">0</div>
+                        <div class="hero-stat-text">Farmers Empowered</div>
+                    </div>
+                    <div class="hero-stat-card wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="hero-stat-number odometer" data-count="10">0</div>
+                        <div class="hero-stat-text">Agro-climatic Zones</div>
+                    </div>
+                    <div class="hero-stat-card wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="hero-stat-number odometer" data-count="3">0</div>
+                        <div class="hero-stat-text">Year Certification</div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Our Farmers Section -->
+        <section class="premium-section">
+            <div class="tf-container w-1290">
+                <div class="section-header-premium wow fadeInUp">
+                    <span class="section-badge-premium">The Heart of Our Movement</span>
+                    <h2 class="section-title-premium">Our Farmers</h2>
+                    <p class="section-subtitle-premium">
+                        our farmers are not merely participants in the supply chain—they are the living core of our
+                        organic movement
+                    </p>
+                </div>
+
+                <div class="premium-content-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-header-premium">
+                        <div class="card-icon-premium">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="card-title-premium">Our Farmers: Core Of Our Organic Movement</h3>
+                    </div>
+
+                    <div class="content-text-premium">
+                        <p>
+                            At <span class="highlight-premium">Morarka Organic Food Limited</span>, our farmers are not
+                            merely participants in the supply chain—they are the living core of our organic movement.
+                            Spread across diverse agro-ecological regions, this community of growers is supported
+                            through the extensive field network and Internal Control System (ICS) established by <span
+                                class="highlight-premium">Morarka Foundation</span>, one of India's most comprehensive
+                            and trusted organic governance mechanisms.
+                        </p>
+
+                        <p>
+                            Through the ICS, our field teams maintain continuous engagement with every farmer—visiting
+                            villages, monitoring fields, guiding record-keeping, and understanding the practical
+                            challenges they face. This relationship isn't transactional; it is a long conversation
+                            carried across seasons, harvests, and aspirations. Farmers receive support on both technical
+                            and livelihood fronts, including crop planning, financial clarity, input management, and
+                            compliance with organic standards.
+                        </p>
+
+                        <p>
+                            Because organic farming demands care that goes beyond conventional practices, we offer
+                            structured training programmes on soil enrichment, bio-inputs, pest and nutrient management,
+                            and regenerative cultivation methods. Our staff evaluates soil conditions, climatic
+                            patterns, and field histories to recommend the most suitable crops, seeds, and
+                            practices—ensuring that every farm is aligned with ecological realities rather than market
+                            pressure alone.
+                        </p>
+
+                        <p>
+                            With every field visit, every training, and every harvest, our goal remains simple: empower
+                            farmers with knowledge, ensure purity in every grain, and grow a community that thrives with
+                            dignity, confidence, and long-term resilience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Farmer's Journey Timeline -->
+                <!-- <div class="journey-timeline wow fadeInUp" data-wow-delay="0.2s">
+                    <h3 class="section-title-premium" style="text-align: center; font-size: 32px; margin-bottom: 60px;">The Organic Journey</h3>
+                    
+                    <div class="timeline-grid">
+                        <div class="timeline-card wow fadeInUp">
+                            <div class="timeline-step">1</div>
+                            <h4 class="timeline-title">Assessment & Planning</h4>
+                            <p class="timeline-desc">Soil testing, climate analysis, and personalized crop planning based on ecological realities</p>
+                        </div>
+                        
+                        <div class="timeline-card wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="timeline-step">2</div>
+                            <h4 class="timeline-title">Structured Training</h4>
+                            <p class="timeline-desc">Comprehensive training on organic practices, soil health, and regenerative methods</p>
+                        </div>
+                        
+                        <div class="timeline-card wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="timeline-step">3</div>
+                            <h4 class="timeline-title">Certification Process</h3>
+                            <p class="timeline-desc">Three-year transition with documentation support and compliance guidance</p>
+                        </div>
+                        
+                        <div class="timeline-card wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="timeline-step">4</div>
+                            <h4 class="timeline-title">Sustainable Growth</h4>
+                            <p class="timeline-desc">Ongoing support for long-term resilience, market access, and community development</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- Our Harvest Section -->
+        <section class="premium-section light-bg">
+            <div class="tf-container w-1290">
+                <div class="section-header-premium wow fadeInUp">
+                    <span class="section-badge-premium">Nature's Bounty</span>
+                    <h2 class="section-title-premium">Our Harvest</h2>
+                    <p class="section-subtitle-premium">
+                        The purest expression of sustainable farming, nurtured by tradition and guided by organic
+                        principles
+                    </p>
+                </div>
+
+                <div class="premium-content-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-header-premium">
+                        <div class="card-icon-premium">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="card-title-premium">Our Harvest: From Farm to Table</h3>
+                    </div>
+
+                    <div class="content-text-premium">
+                        <p class="mb-3">
+                            At Morarka Organic, every harvest reflects our commitment to <span
+                                class="highlight-premium">sustainable farming</span>, <span
+                                class="highlight-premium">certified organic practices</span>, and <span
+                                class="highlight-premium">farmer empowerment</span>. Through our Internal Control System
+                            (ICS), we work closely with farming communities across diverse agro-climatic regions of
+                            India to ensure <span class="highlight-premium">full traceability, quality, and
+                                compliance</span> from seed to store.
+                        </p>
+
+                        <p class="mb-3">
+                            Our farmers follow <span class="highlight-premium">eco-friendly cultivation patterns</span>,
+                            integrating traditional knowledge with modern organic techniques. Crops are grown using
+                            natural inputs, crop rotation, and biodiversity-friendly methods, ensuring <span
+                                class="highlight-premium">nutrient-rich, chemical-free produce</span>.
+                        </p>
+
+                        <p class="mb-3">
+                            From <span class="highlight-premium">cereals, pulses, and oilseeds</span> to <span
+                                class="highlight-premium">fruits, vegetables, and spices</span>, our harvest is diverse,
+                            abundant, and high-quality. Every grain, pod, and fruit represents <span
+                                class="highlight-premium">ethical farming, environmental stewardship, and sustainable
+                                livelihoods</span> for our farmer partners.
+                        </p>
+
+                        <p class="mb-3">
+                            With <span class="highlight-premium">170+ certified organic products</span>, Morarka Organic
+                            brings the <span class="highlight-premium">best of India's farms to your table</span>,
+                            nurturing both <span class="highlight-premium">health and nature</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product Categories -->
+                <div class="product-showcase wow fadeInUp" data-wow-delay="0.2s">
+                    <h3 class="section-title-premium" style="text-align: center; font-size: 32px; margin-bottom: 60px;">
+                        Our Organic Portfolio</h3>
+
+                    <div class="product-categories">
+                        <div class="product-category wow fadeInUp">
+                            <div class="category-icon">
+                                <i class="fas fa-wheat-alt"></i>
+                            </div>
+                            <h4 class="category-title">Cereals & Grains</h4>
+                            <div class="category-items">
+                                <span class="category-item">Wheat</span>
+                                <span class="category-item">Rice</span>
+                                <span class="category-item">Millets</span>
+                                <span class="category-item">Quinoa</span>
+                            </div>
+                        </div>
+
+                        <div class="product-category wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="category-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4 class="category-title">Pulses & Legumes</h4>
+                            <div class="category-items">
+                                <span class="category-item">Lentils</span>
+                                <span class="category-item">Chickpeas</span>
+                                <span class="category-item">Beans</span>
+                                <span class="category-item">Peas</span>
+                            </div>
+                        </div>
+
+                        <div class="product-category wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="category-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h4 class="category-title">Fruits & Vegetables</h4>
+                            <div class="category-items">
+                                <span class="category-item">Seasonal Fruits</span>
+                                <span class="category-item">Leafy Greens</span>
+                                <span class="category-item">Root Vegetables</span>
+                                <span class="category-item">Exotics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="tf-container w-1290">
+                <div class="section-header-premium wow fadeInUp">
+                    <span class="section-badge-premium">Behind the Harvest</span>
+                    <h2 class="section-title-premium">Our Farming Community</h2>
+                    <p class="section-subtitle-premium">
+                        A glimpse into the lives and landscapes that bring organic goodness to your table
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item wow fadeInUp">
+                        <img src="images/imageBYMam/event10.jpeg" alt="Farmer in organic field">
+                        <div class="gallery-overlay">
+                            <h4 class="gallery-title">Field Monitoring</h4>
+                            <p class="gallery-desc">Regular field visits by our technical teams ensure organic
+                                compliance and quality</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item wow fadeInUp" data-wow-delay="0.1s">
+                        <img src="images/imageBYMam/farmerImg.jpeg" alt="Fresh organic harvest">
+                        <div class="gallery-overlay">
+                            <h4 class="gallery-title">Bountiful Harvest</h4>
+                            <p class="gallery-desc">Chemical-free produce harvested at peak freshness and nutritional
+                                value</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="images/imageBYMam/NSDL_DODA.JPG" alt="Farmer training session">
+                        <div class="gallery-overlay">
+                            <h4 class="gallery-title">Knowledge Sharing</h4>
+                            <p class="gallery-desc">Regular training sessions on organic farming techniques and best
+                                practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <!-- <section class="harvest-cta">
+            <div class="cta-container wow fadeInUp">
+                <h2 class="cta-title">Join the Organic Movement</h2>
+                <p class="cta-text">
+                    Experience the purity of certified organic produce while supporting sustainable farming communities across India.
+                </p>
+                <a href="products.html" class="cta-button">
+                    <i class="fas fa-shopping-basket"></i> Shop Our Harvest
+                </a>
+            </div>
+        </section> -->
+
+        <!-- Footer will be loaded via JavaScript -->
+        <div id="site-footer"></div>
+
+    </div>
+    <!-- /#Wapper -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/odometer.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        // Initialize WOW.js for animations
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof WOW === 'function') {
+                new WOW({
+                    offset: 100,
+                    mobile: true,
+                    live: true
+                }).init();
+            }
+
+            // Initialize Odometer for stats counting
+            if (typeof Odometer !== 'undefined') {
+                const odometers = document.querySelectorAll('.odometer');
+                odometers.forEach((odometer, index) => {
+                    const el = odometer;
+                    const value = el.getAttribute('data-count');
+
+                    const od = new Odometer({
+                        el: el,
+                        value: 0,
+                        format: '(,ddd)',
+                        theme: 'default',
+                        duration: 2000
+                    });
+
+                    setTimeout(() => {
+                        od.update(value);
+                    }, 300 + (index * 300));
+                });
+            }
+
+            // Load header and footer
+            function loadComponent(url, elementId) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading component:', error);
+                        document.getElementById(elementId).innerHTML =
+                            '<div class="text-center py-5"><p>Component failed to load. Please check the file path.</p></div>';
+                    });
+            }
+
+            // Load components
+            loadComponent('header.html', 'site-header');
+            loadComponent('footer.html', 'site-footer');
+        });
+    </script>
+
+</body>
+
+</html>

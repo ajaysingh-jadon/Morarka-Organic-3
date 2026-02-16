@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>FoodSpert – Knowledge Share | Morarka Organic</title>
+
+    <meta name="description" content="FoodSpert Knowledge Share – Turning food wisdom into a global movement">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/odometer.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/textanimation.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/fonts.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo1.png">
+    <!-- PAGE SCOPED POLISH -->
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .page-title {
+            overflow: hidden;
+        }
+
+        .page-foodspert-knowledge {
+            overflow-x: hidden;
+        }
+
+       
+        .page-foodspert-knowledge .hero-divider {
+            width: 90px;
+            height: 4px;
+            background: var(--Secondary);
+            margin: 26px auto 0;
+            border-radius: 4px;
+        }
+
+        /* SECTIONS */
+        .page-foodspert-knowledge .tf-section {
+            padding: 110px 0;
+        }
+
+        .page-foodspert-knowledge .foodspert-soft-bg {
+            background: linear-gradient(180deg, #eef4ee 0%, #ffffff 100%);
+        }
+
+        /* IMAGE */
+        .page-foodspert-knowledge .foodspert-image img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+        }
+
+        /* QUOTE */
+        .page-foodspert-knowledge .foodspert-quote {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.35;
+            color: #1f3d2b;
+            margin-bottom: 22px;
+        }
+
+        /* FOOD GUILT */
+        .foodspert-question-box {
+            background: #fff;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 28px 65px rgba(0, 0, 0, .12);
+            margin: auto;
+            border-left: 6px solid var(--Secondary);
+        }
+
+        .foodspert-question-box li {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            list-style: none;
+        }
+
+        .foodspert-question-box li::before {
+            content: "—";
+            margin-right: 10px;
+            color: var(--Secondary);
+        }
+
+
+      
+
+        /* CTA */
+        .page-foodspert-knowledge .btn.style-1 {
+            padding: 14px 36px;
+            transition: .35s;
+        }
+
+        .page-foodspert-knowledge .btn.style-1:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
+        }
+
+        /* Accordion polish – FoodSpert questions */
+        .foodspert-question-box .accordion-item {
+            border: none;
+            margin-bottom: 12px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .foodspert-question-box .accordion-button {
+            font-size: 20px;
+            font-weight: 500;
+            background: #fff;
+            color: #1f3d2b;
+            padding: 18px 22px;
+        }
+
+        .foodspert-question-box .accordion-button::after {
+            font-family: "Font Awesome 6 Free";
+            content: "\f067" !important;
+            font-weight: 900;
+            position: absolute;
+            right: 2%;
+            background-image: none;
+            transform: none;
+        }
+
+        .foodspert-question-box .accordion-button:not(.collapsed)::after {
+            content: "\f068" !important;
+            color: var(--Secondary);
+            transform: rotate(180deg) !important;
+        }
+
+        .foodspert-question-box .accordion-button:not(.collapsed) {
+            background: #eef4ee;
+            color: #1f3d2b;
+        }
+
+        .foodspert-question-box .accordion-body {
+            background: #fff;
+            padding: 18px 22px;
+            line-height: 1.7;
+        }
+
+
+        /* RESPONSIVE */
+        @media(max-width:991px) {
+            .s-wheat-img-item {
+                display: none
+            }
+
+            .page-foodspert-knowledge .page-title {
+                padding: 100px 0 90px
+            }
+
+            .page-foodspert-knowledge .tf-section {
+                padding: 90px 0
+            }
+
+            .foodspert-quote {
+                font-size: 26px
+            }
+        }
+
+        @media(max-width:767px) {
+            .foodspert-question-box {
+                padding: 30px 22px
+            }
+
+            .foodspert-hero-text {
+                font-size: 17px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="page-foodspert-knowledge">
+
+        <!-- ===== HEADER ===== -->
+        <div id="site-header"></div>
+
+        <!-- HERO -->
+        <div class="page-title">
+            <div class="rellax" data-rellax-speed="5">
+                <img src="images/page-title/contact-us.jpg" alt="">
+            </div>
+            <div class="content-wrap">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="content">
+                                <h1 class="title">foodspert - Knowledge Share</h1>
+                                <div class="icon-img">
+                                    <img src="images/item/line-throw-title.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-item item-2">
+                <img src="images/item/grass.png" alt="">
+            </div>
+        </div>
+        <!-- DEFINE -->
+        <section class="tf-section">
+            <div class="tf-container w-1290">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft my-3">
+                     
+                        <h2 class="foodspert-quote">Food is knowledge, joy and a way of life.</h2>
+                        <p class="font-nunito">
+                            Having defined a Foodspert as someone who knows about food in its entirety and for whom food
+                            is also
+                            one form of ultimate joy & happiness in life, we are now looking to make this a global
+                            movement.
+                        </p>
+                        <p class="font-nunito">
+                            We are looking for those who are Foodsperts themselves and are also willing to inspire more
+                            and more
+                            people to become Foodsperts.
+                        </p>
+                        <p>
+                            Today almost every one eats food with a sense of guilt; be it due to health problems already
+                            suffered by a person or likely to afflict a person in near future. A large percentage of our
+                            society is now looking for solutions to this problem. Alternatives in the form of healthy
+                            salads & soups are not the perfectly acceptable solutions. Many of us have unanswered
+                            questions like:
+                        </p>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight">
+                        <div class="foodspert-image my-3">
+                            <img src="images/farms/food2.jfif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOD GUILT -->
+        <section class="tf-section foodspert-soft-bg">
+            <div class="tf-container w-1290">
+                <div class="foodspert-question-box wow fadeInUp">
+
+                    <h2 class="title mb-20">Why Do We Feel Guilty About Food?</h2>
+
+                    <div class="accordion" id="foodGuiltAccordion">
+
+                        <!-- Q1 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q1">
+                                    <span>Why is my regular food not healthy?</span>
+                                </button>
+                            </h3>
+                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#foodGuiltAccordion">
+                                <div class="accordion-body font-nunito">
+                                    Modern food is often produced using excessive chemical inputs, artificial
+                                    fertilizers,
+                                    pesticides and preservatives, which reduce its nutritional quality and affect
+                                    long-term health.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q2">
+                                    <span>How did our ancestors eat the same food and remain healthy?</span>
+                                </button>
+                            </h3>
+                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#foodGuiltAccordion">
+                                <div class="accordion-body font-nunito">
+                                    Earlier generations consumed food grown with traditional practices, native seeds,
+                                    natural soil fertility and minimal processing, which preserved both nutrition and
+                                    taste.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q3">
+                                    <span>Why do healthy choices always seem to compromise on taste?</span>
+                                </button>
+                            </h3>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#foodGuiltAccordion">
+                                <div class="accordion-body font-nunito">
+                                    Highly processed foods are engineered for instant flavour, while real, natural food
+                                    develops taste through soil quality, traditional varieties and slow, mindful
+                                    cultivation.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ANSWERS -->
+        <section class="tf-section position-relative">
+            <div class="tf-container w-1290">
+                <div class="row">
+                    <div class="col-lg-8 wow fadeInUp">
+                        <h2 class="title">We Have the Answers</h2>
+                        <p class="font-nunito">
+                            We want to share the wealth of information and experiences we have gathered over the years.
+                            Today, accessing correct and meaningful information about food has become increasingly
+                            difficult.
+                        </p>
+                        <p class="font-nunito">
+                            In earlier days, we acquired knowledge inherited through generations and through our own
+                            experiences. Today it is becoming increasingly difficult to access correct information and
+                            true facts about food. Traditional media has limited content, mostly recipes and horror
+                            stories about contamination and adulteration in foods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="s-wheat-img-item wow fadeInRight" data-wow-delay="0.15s">
+                <img src="images/wheat-removebg-preview.png" alt="">
+            </div>
+        </section>
+
+        <!-- JOURNEY -->
+        <section class="tf-section foodspert-soft-bg">
+            <div class="tf-container w-1290 text-center">
+                <h2 class="title wow fadeInUp">The FoodSpert Journey</h2>
+                <p class="font-nunito wow fadeInUp" data-wow-delay="0.15s">
+                    A complete journey through the organic food chain.
+                </p>
+
+                <div class="row g-40 mt-4">
+                    <div class="col-lg-4 wow fadeInUp my-3">
+                        <div class="foodspert-card text-start">
+                            <h4>Cultivation to Processing</h4>
+                            <p class="font-nunito">Experience organic farming and sustainable practices.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp my-3" data-wow-delay="0.15s">
+                        <div class="foodspert-card text-start">
+                            <h4>Knowledge & Nutrition</h4>
+                            <p class="font-nunito">Understand food, diet and health deeply.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp my-3" data-wow-delay="0.3s">
+                        <div class="foodspert-card text-start">
+                            <h4>Becoming a FoodSpert</h4>
+                            <p class="font-nunito">Transform into a knowledgeable food citizen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVITATION -->
+        <section class="tf-section">
+            <div class="tf-container w-1290 text-center wow fadeInUp">
+                <h2 class="title">Join the FoodSpert Movement</h2>
+                <p class="font-nunito">
+                    Anyone interested can contact us through <strong>www.foodspert.com</strong> or via our
+                    retail outlets and offices across India & abroad.
+                </p>
+                <p class="font-nunito">
+                    For career-conscious individuals, we offer meaningful opportunities to engage and grow.
+                </p>
+
+            </div>
+        </section>
+
+        <div id="site-footer"></div>
+
+    </div>
+
+    <script>
+        new WOW({ mobile: false, offset: 80 }).init();
+    </script>
+     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lazysize.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/odometer.min.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="js/count-down.js"></script>
+    <script type="text/javascript" src="js/jquery-validate.js"></script>
+    <script type="text/javascript" src="js/gsap-animation.js"></script>
+    <script type="text/javascript" src="js/gsap.min.js"></script>
+    <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="js/Splitetext.js"></script>
+    <script type="text/javascript" src="js/footer_load.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Foodspert - Reviving the Heritage of Food | Morarka Organic</title>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+ 
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate2.min.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/fonts.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo.jpg">
+
+  
+    <style>
+       
+        
+      
+    
+        
+        
+        
+        .foodspert-content-section {
+            padding: 100px 0;
+            background-color: var(--Bg-8);
+        }
+        
+        .foodspert-content-section.alternate {
+            background-color: var(--White);
+        }
+        
+        .foodspert-content-block {
+            margin-bottom: 60px;
+        }
+        
+        .foodspert-content-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .foodspert-content-block .content-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--Primary);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .foodspert-content-block .content-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--Secondary);
+        }
+        
+        .foodspert-content-block .content-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--Text);
+            margin-bottom: 20px;
+        }
+        
+        .foodspert-content-block .highlight-text {
+            color: var(--Text-4);
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        .foodspert-image-block {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .foodspert-image-block:hover {
+            transform: translateY(-10px);
+        }
+        
+        .foodspert-image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .foodspert-principles {
+            background-color: var(--Bg-1);
+            padding: 100px 0;
+            border-top: 1px solid var(--Border);
+            border-bottom: 1px solid var(--Border);
+        }
+        
+        .principles-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--Text-2);
+            margin-bottom: 60px;
+        }
+        
+        .principles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .principle-card {
+            background-color: var(--White);
+            border-radius: 15px;
+            padding: 40px 30px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--Secondary);
+        }
+        
+        .principle-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .principle-card .card-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--Bg-17);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .principle-card .card-icon i {
+            font-size: 32px;
+            color: var(--Primary);
+        }
+        
+        .principle-card .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--Primary);
+            margin-bottom: 15px;
+        }
+        
+        .principle-card .card-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--Text);
+        }
+        
+        .foodspert-cta {
+            background: linear-gradient(to right, var(--Primary), var(--Bg-11));
+            padding: 100px 0;
+            color: var(--White);
+            text-align: center;
+        }
+        
+        .foodspert-cta .cta-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .foodspert-cta .cta-text {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: var(--Text-6);
+        }
+        
+        .foodspert-cta .cta-button {
+            display: inline-block;
+            background-color: var(--Secondary);
+            color: var(--Text-2);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--Secondary);
+        }
+        
+        .foodspert-cta .cta-button:hover {
+            background-color: transparent;
+            color: var(--Secondary);
+        }
+        
+        .foodspert-quote {
+            padding: 80px 0;
+            background-color: var(--Bg-16);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .foodspert-quote:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/quote-pattern.png');
+            opacity: 0.1;
+        }
+        
+        .quote-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quote-icon {
+            font-size: 60px;
+            color: var(--Primary);
+            opacity: 0.3;
+            margin-bottom: 30px;
+        }
+        
+        .quote-text {
+            font-size: 28px;
+            line-height: 1.6;
+            color: var(--Text-2);
+            font-style: italic;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .quote-author {
+            font-size: 18px;
+            color: var(--Text-4);
+            font-weight: 600;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1199px) {
+          
+            .principles-container {
+                gap: 20px;
+            }
+            
+            .principle-card {
+                min-width: 280px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            
+            
+            
+            
+            .foodspert-content-block .content-title {
+                font-size: 32px;
+            }
+            
+            .principle-card {
+                min-width: 100%;
+            }
+            
+            .foodspert-cta .cta-title {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+           
+            
+           
+            
+            
+            
+            .foodspert-content-section {
+                padding: 70px 0;
+            }
+            
+            .foodspert-content-block .content-title {
+                font-size: 28px;
+            }
+            
+            .foodspert-content-block .content-text {
+                font-size: 17px;
+            }
+            
+            .principles-title {
+                font-size: 32px;
+            }
+            
+            .principle-card {
+                padding: 30px 20px;
+            }
+            
+            .foodspert-cta {
+                padding: 70px 0;
+            }
+            
+            .foodspert-cta .cta-title {
+                font-size: 30px;
+            }
+            
+            .quote-text {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+           
+            
+            .foodspert-content-block .content-title {
+                font-size: 26px;
+            }
+            
+            .principles-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+            
+            .foodspert-cta .cta-title {
+                font-size: 26px;
+            }
+            
+            .foodspert-cta .cta-button {
+                padding: 15px 35px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body class="page-foodspert">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div class="loader-container">
+                    <div class="wrap-loader">
+                        <div class="loader">
+                        </div>
+                        <div class="icon">
+                            <img src="images/logo/morarka_logo1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.Preloader -->
+
+       <!-- Top-bar -->
+        <div id="site-header"></div>
+     <!-- /.Header -->
+        
+        <!-- Foodspert Title Section -->
+
+
+        <div class="page-title page-our-history">
+            <div class="rellax" data-rellax-speed="5">
+                <img class="" src="images/item/flower.jpg" alt="">
+            </div>
+            <div class="content-wrap">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="content">
+                                <p class="sub-title">
+                                    Firmly rooted in tradition
+                                </p>
+                                <h1 class="title">
+                                    Foodspert
+                                </h1>
+                                <div class="icon-img">
+                                    <img src="images/item/line-throw-title.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-item item-2">
+                <img src="images/item/grass.png" alt="">
+            </div>
+        </div>
+        
+        <!-- /.Foodspert Title Section -->
+
+        <!-- Main-content -->
+        <div class="main-content page-foodspert">
+
+            <!-- Foodspert Content Section 1 -->
+            <section class="foodspert-content-section">
+                <div class="tf-container w-1290">
+                    <div class="row align-items-streach">
+                        <div class="col-lg-6">
+                            <div class="foodspert-content-block">
+                                <h2 class="content-title">For Foodspert</h2>
+                                <p class="content-text">Our initiative, Foodspert, is designed to cultivate a cadre of food experts who possess comprehensive knowledge about food—from its origin, cultivation, and nutrition to its history, culinary traditions, and value addition.</p>
+                                <p class="content-text">In today’s fast-paced world, convenience has overtaken tradition. Meals that once required hours of careful preparation are now reduced to minutes, often at the press of a microwave button. The act of eating has shifted from a ritual of enjoyment and mindfulness to a functional process focused solely on satiation.</p>
+                                <p class="content-text">Through Foodspert, Morarka Organic seeks to revive and preserve the rich heritage of food, reconnecting people with its cultural, nutritional, and ecological significance.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="foodspert-image-block wow fadeInRight" data-wow-delay="0.3s">
+                                <img src="images/shop/shop1.jpeg" alt="Foodspert Vision">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Foodspert Content Section 1 -->
+            
+            <!-- Foodspert Content Section 2 -->
+            <section class="foodspert-content-section alternate">
+                <div class="tf-container w-1290">
+                    <div class="row align-items-center flex-lg-row-reverse">
+                        <div class="col-lg-6">
+                            <div class="foodspert-content-block">
+                                <h2 class="content-title">The Foodspert Philosophy</h2>
+                                <p class="content-text">A Foodspert approaches food as more than fuel. Eating is an experience—one that encompasses pleasure, contentment, and understanding of dietary choices. Foodsperts emphasize the importance of nutrition, diversity, and sustainability, while also protecting traditional ingredients, recipes, and practices that are increasingly at risk of disappearing.</p>
+                                <p class="content-text">They work to revive forgotten grains, vegetables, fruits, and culinary techniques, ensuring that these valuable traditions continue for future generations.</p>
+                                <p class="content-text highlight-text">The philosophy of a Foodspert is rooted in balance: food should be tasty, wholesome, and unpolluted, while promoting environmental stewardship and the well-being of humans and animals alike.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="foodspert-image-block wow fadeInLeft" data-wow-delay="0.3s">
+                                <img src="images/imageBYMam/event10.jpeg" alt="Foodspert Philosophy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Foodspert Content Section 2 -->
+            
+            <!-- Foodspert Principles Section -->
+            <section class="foodspert-principles">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="principles-title">The Role of a Foodspert</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="principles-container">
+                                <div class="principle-card wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="card-icon">
+                                        <i class="icon-leaf"></i>
+                                    </div>
+                                    <h3 class="card-title">Informed Participants</h3>
+                                    <p class="card-text">Foodsperts are informed participants in the food ecosystem—they understand production, processing, nutrition, and culinary application.</p>
+                                </div>
+                                
+                                <div class="principle-card wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="card-icon">
+                                        <i class="icon-connect"></i>
+                                    </div>
+                                    <h3 class="card-title">Bridging Knowledge</h3>
+                                    <p class="card-text">By bridging scientific research, traditional farming knowledge, and consumer behavior, Foodsperts create a vital link connecting farmers, producers, and end consumers.</p>
+                                </div>
+                                
+                                <div class="principle-card wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="card-icon">
+                                        <i class="icon-education"></i>
+                                    </div>
+                                    <h3 class="card-title">Education & Empowerment</h3>
+                                    <p class="card-text">Through education, guidance, and advocacy, Foodsperts empower individuals to make informed daily food choices that are nutritious, sustainable, and culturally meaningful.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Foodspert Principles Section -->
+            
+            <!-- Foodspert Content Section 3 -->
+            <section class="foodspert-content-section">
+                <div class="tf-container w-1290">
+                    <div class="row align-items-streach">
+                        <div class="col-lg-6">
+                            <div class="foodspert-content-block">
+                                <h2 class="content-title">Transforming Consumers</h2>
+                                <p class="content-text">Foodsperts transform consumers from passive recipients into active participants in a food revolution, fostering awareness of clean, fair, and ecological food practices.</p>
+                                <p class="content-text">Finally, Foodsperts recognize the intrinsic connection between food, biodiversity, and the planet. By promoting organic, sustainable practices and protecting traditional food systems, they safeguard not just health, but also communities, cultures, and ecosystems—ensuring a better quality of life for all.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="foodspert-image-block wow fadeInRight" data-wow-delay="0.3s">
+                                <img src="images/shop/shop3.jpeg" alt="Transforming Food Consumers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Foodspert Content Section 3 -->
+            
+            <!-- Foodspert Quote Section -->
+            <section class="foodspert-quote">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="quote-content">
+                                <div class="quote-icon">
+                                    <i class="icon-quote"></i>
+                                </div>
+                                <p class="quote-text">"Food is not just nourishment—it is culture, heritage, and a bridge to a healthier, more sustainable future."</p>
+                                <p class="quote-author">- Morarka Organic Foodspert Initiative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.Foodspert Quote Section -->
+            
+            <!-- Foodspert CTA Section -->
+            <!-- <section class="foodspert-cta">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="cta-title">Join the Foodspert Movement</h2>
+                            <p class="cta-text">Become part of a community dedicated to reviving food heritage, promoting sustainable practices, and creating a healthier future for generations to come.</p>
+                            <a href="#" class="cta-button">Learn More About Foodspert</a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- /.Foodspert CTA Section -->
+
+        </div><!-- /.Main-content -->
+
+        <!-- Footer -->
+        <div id="site-footer"></div>
+        <!-- /.Footer -->
+
+    </div><!-- /#Wapper -->
+
+    <!-- Open-search -->
+    <div class="offcanvas offcanvas-top offcanvas-search" id="canvasSearch">
+        <button class="btn-close-search" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="icon-close"></i>
+        </button>
+        <div class="tf-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="offcanvas-body">
+                        <form action="#" class="form-search-courses">
+                            <div class="icon">
+                                <i class="icon-keyboard"></i>
+                            </div>
+                            <fieldset>
+                                <input class="" type="text" placeholder="Search for anything" name="text" tabindex="2"
+                                    value="" aria-required="true" required="">
+                            </fieldset>
+                            <div class="button-submit">
+                                <button class="" type="submit">
+                                    <i class="icon-magnifying-glass"></i>
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.Open-search -->
+
+    <!-- Prograss -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div><!-- /.Prograss -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lazysize.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/gsap-animation.js"></script>
+    <script type="text/javascript" src="js/gsap.min.js"></script>
+    <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="js/Splitetext.js"></script>
+    <script type="text/javascript" src="js/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax(".rellax");
+    </script>
+    <script type="text/javascript" src="js/footer_load.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    <!-- Foodspert Page JS -->
+    <script>
+        // Initialize WOW.js for animations
+        new WOW().init();
+        
+        // Add scroll animation for principle cards
+        $(document).ready(function() {
+            // Add active class to current page in navigation
+            $('.nav-item').removeClass('active');
+            $('a[href*="foodspert"]').parent().addClass('active');
+            
+           
+            
+            // Smooth scroll for internal links
+            $('a[href^="#"]').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 100
+                    }, 800);
+                }
+            });
+        });
+    </script>
+    <!-- /Javascript -->
+
+</body>
+
+</html>

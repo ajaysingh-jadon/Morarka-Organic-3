@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Business Enquiry | Collaboration & Enquiries - Morarka Organic Foods Limited</title>
+
+    <meta name="description"
+        content="Explore Morarka Organic's comprehensive product portfolio and submit business enquiries. Partner with India's leading organic brand for wholesale, retail, and institutional requirements.">
+
+    <meta name="keywords"
+        content="organic business enquiry, wholesale organic products, bulk organic orders, partnership opportunities, organic distributorship, Morarka Organic products">
+    
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/odometer.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/textanimation.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="font/fonts.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo1.png">
+
+    <style>
+        /* Premium Business Enquiry Page Styles */
+        .premium-enquiry-page {
+            background: #fdfdfd;
+            overflow-x: hidden;
+        }
+
+        /* Section Styles */
+        .premium-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .premium-section.light-bg {
+            background: linear-gradient(135deg, #fdfdfd 0%, #f8f9fa 100%);
+        }
+
+        .premium-section.dark-bg {
+            background: linear-gradient(135deg, var(--Primary) 0%, var(--Bg-11) 100%);
+            color: var(--White);
+        }
+
+        .premium-section.accent-bg {
+            background: linear-gradient(135deg, var(--Bg-8) 0%, #f5f3ef 100%);
+        }
+
+        /* Section Headers */
+        .section-header-premium {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-badge-premium {
+            display: inline-block;
+            background: var(--Bg-1);
+            color: var(--Primary);
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-badge-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .section-badge-premium:hover::before {
+            left: 100%;
+        }
+
+        .section-title-premium {
+            font-size: 35px;
+            font-weight: 700;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            
+            color: var(--Text-2);
+            line-height: 1.2;
+            position: relative;
+            
+        }
+
+        .section-title-premium::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(to right, var(--Primary), var(--Secondary));
+            border-radius: 2px;
+        }
+
+        .premium-section.dark-bg .section-title-premium {
+            color: var(--White);
+        }
+
+        .section-subtitle-premium {
+            font-size: 20px;
+            color: var(--body-text);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .premium-section.dark-bg .section-subtitle-premium {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Business Overview Card */
+        .business-overview-card {
+            background: var(--White);
+            border-radius: 25px;
+            padding: 60px 50px;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.1);
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .business-overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 80px rgba(13, 64, 28, 0.15);
+        }
+
+        .business-icon-premium {
+            font-size: 56px;
+            color: var(--Primary);
+            margin-bottom: 35px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(13, 64, 28, 0.1), rgba(248, 195, 44, 0.1));
+            margin: 0 auto 35px;
+        }
+
+        .business-title-premium {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--Text-2);
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .business-content-premium {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--body-text);
+            text-align: center;
+        }
+
+        .highlight-premium {
+            color: var(--Primary);
+            font-weight: 700;
+           
+            padding: 4px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        /* Product Categories Section */
+        .product-categories-section {
+            background: var(--White);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--Border-4);
+        }
+
+        .category-icon {
+            font-size: 32px;
+            color: var(--Primary);
+            margin-right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(13, 64, 28, 0.1), rgba(248, 195, 44, 0.1));
+        }
+
+        .category-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin: 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            background: var(--Bg-8);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-item:hover {
+            background: var(--White);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 64, 28, 0.1);
+            border-color: var(--Secondary);
+        }
+
+        .product-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--Primary), var(--Secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-item:hover::before {
+            opacity: 1;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--Text-2);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-subcategory {
+            font-size: 14px;
+            color: var(--Primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enquiry Form Section */
+        .enquiry-form-section {
+            background: linear-gradient(135deg, rgba(13, 64, 28, 0.03) 0%, rgba(248, 195, 44, 0.03) 100%);
+            border-radius: 25px;
+            padding: 60px 50px;
+            margin-top: 60px;
+        }
+
+        .form-title-premium {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: var(--Text-2);
+            text-align: center;
+        }
+
+        .form-subtitle-premium {
+            font-size: 18px;
+            color: var(--body-text);
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .enquiry-form {
+            background: var(--White);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(13, 64, 28, 0.1);
+        }
+
+        .form-group-premium {
+            margin-bottom: 30px;
+        }
+
+        .form-label-premium {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--Text-2);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .form-control-premium {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid var(--Border-4);
+            border-radius: 12px;
+            font-size: 16px;
+            color: var(--Text-2);
+            background: var(--White);
+            transition: all 0.3s ease;
+        }
+
+        .form-control-premium:focus {
+            outline: none;
+            border-color: var(--Primary);
+            box-shadow: 0 0 0 3px rgba(13, 64, 28, 0.1);
+        }
+
+        .form-control-premium::placeholder {
+            color: var(--Text);
+            opacity: 0.6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .form-select-premium {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid var(--Border-4);
+            border-radius: 12px;
+            font-size: 16px;
+            color: var(--Text-2);
+            background: var(--White);
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230d401c' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+        }
+
+        .form-select-premium:focus {
+            outline: none;
+            border-color: var(--Primary);
+            box-shadow: 0 0 0 3px rgba(13, 64, 28, 0.1);
+        }
+
+        .textarea-premium {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .form-check-premium {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .form-check-input-premium {
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+            border: 2px solid var(--Border-4);
+            border-radius: 6px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .form-check-input-premium:checked {
+            background-color: var(--Primary);
+            border-color: var(--Primary);
+        }
+
+        .form-check-label-premium {
+            font-size: 16px;
+            color: var(--body-text);
+            cursor: pointer;
+        }
+
+        .form-check-label-premium a {
+            color: var(--Primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-check-label-premium a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn-premium {
+            background: linear-gradient(135deg, var(--Primary), var(--Bg-11));
+            color: var(--White);
+            border: none;
+            padding: 20px 45px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 200px;
+            box-shadow: 0 15px 35px rgba(13, 64, 28, 0.2);
+        }
+
+        .submit-btn-premium:hover {
+            background: linear-gradient(135deg, var(--Bg-11), var(--Primary));
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(13, 64, 28, 0.3);
+        }
+
+        /* Contact Info Cards */
+        .contact-info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .contact-card-premium {
+            background: var(--White);
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 20px 50px rgba(13, 64, 28, 0.1);
+            border: 1px solid rgba(13, 64, 28, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card-premium:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 70px rgba(13, 64, 28, 0.15);
+        }
+
+        .contact-icon-premium {
+            font-size: 42px;
+            color: var(--Primary);
+            margin-bottom: 25px;
+        }
+
+        .contact-title-premium {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin-bottom: 20px;
+        }
+
+        .contact-details-premium {
+            font-size: 17px;
+            color: var(--body-text);
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .section-title-premium {
+                font-size: 42px;
+            }
+            
+            .business-overview-card {
+                padding: 50px 40px;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section-title-premium {
+                font-size: 38px;
+            }
+            
+            .business-title-premium {
+                font-size: 28px;
+            }
+            
+            .business-content-premium {
+                font-size: 17px;
+            }
+            
+            .product-categories-section {
+                padding: 40px 30px;
+            }
+            
+            .enquiry-form-section {
+                padding: 50px 40px;
+            }
+            
+            .enquiry-form {
+                padding: 40px 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .premium-section {
+                padding: 80px 0;
+            }
+            
+            .section-title-premium {
+                font-size: 32px;
+            }
+            
+            .section-subtitle-premium {
+                font-size: 18px;
+            }
+            
+            .business-overview-card {
+                padding: 40px 30px;
+            }
+            
+            .business-icon-premium {
+                width: 80px;
+                height: 80px;
+                font-size: 42px;
+            }
+            
+            .category-title {
+                font-size: 24px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .enquiry-form-section {
+                padding: 40px 30px;
+            }
+            
+            .enquiry-form {
+                padding: 35px 30px;
+            }
+            
+            .form-title-premium {
+                font-size: 28px;
+            }
+            
+            .contact-info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title-premium {
+                font-size: 28px;
+            }
+            
+            .business-overview-card {
+                padding: 35px 25px;
+            }
+            
+            .product-categories-section {
+                padding: 35px 25px;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .enquiry-form-section {
+                padding: 35px 25px;
+            }
+            
+            .enquiry-form {
+                padding: 30px 25px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .submit-btn-premium {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="javascript/html5shiv.js"></script>
+        <script src="javascript/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="counter-scroll premium-enquiry-page">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header will be loaded via JavaScript -->
+        <div id="site-header"></div>
+
+
+         <div class="page-title">
+            <div class="rellax" data-rellax-speed="5">
+                <img src="images/page-title/contact-us.jpg" alt="">
+            </div>
+            <div class="content-wrap">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="content">
+                                <h1 class="title"> Business Enquiry</h1>
+                                <div class="icon-img">
+                                    <img src="images/item/line-throw-title.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-item item-2">
+                <img src="images/item/grass.png" alt="">
+            </div>
+        </div>
+        <!-- Your existing hero section will go here -->
+
+        <!-- Business Enquiry Overview -->
+        <section class="premium-section light-bg">
+            <div class="tf-container w-1290">
+                <div class="section-header-premium text-center">
+                    <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
+                        <i class="fas fa-handshake me-2"></i> Partnership Opportunities
+                    </span>
+                    <h2 class="section-title-premium text-center wow fadeInUp" data-wow-delay="0.2s">
+                        Business Enquiry
+                    </h2>
+                    <p class="section-subtitle-premium wow fadeInUp" data-wow-delay="0.3s">
+                        Explore wholesale, retail, and institutional partnership opportunities with India's leading organic brand.
+                    </p>
+                </div>
+
+                <div class="business-overview-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="business-icon-premium">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <!-- <h3 class="business-title-premium">Comprehensive Product Portfolio</h3> -->
+                    <div class="business-content-premium">
+                        <p>
+                            <span class="highlight-premium">Morarka Organic has a very large range of products and services on offer.</span> From its overall portfolio, some products are always maintained as ready stocks and some are delivered according to crop seasons only. For many products currently not included in the portfolio, but if required by the prospective clients can also be arranged with prior understanding and agreements.
+                        </p>
+                        <p class="mt-4">
+                            For early and responsible feedback, kindly take some time to define your enquiry with all the parameters desired by you. To help and guide you, we have readymade and constantly updated information on following product categories:
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section class="premium-section">
+            <div class="tf-container w-1290">
+                <div class="section-header-premium">
+                    <h2 class="section-title-premium font-farmhouse wow fadeInUp" data-wow-delay="0.2s">
+                        Our Product Categories
+                    </h2>
+                    <p class="section-subtitle-premium wow fadeInUp" data-wow-delay="0.3s">
+                        Explore our comprehensive range of 170+ certified organic products across multiple categories.
+                    </p>
+                </div>
+
+                <!-- Everyday Pulses -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="category-title">Everyday Pulses</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Premium Pulses</div>
+                            <div class="product-name">Arhar Dal</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Chana Varieties</div>
+                            <div class="product-name">Chana Whole</div>
+                            <div class="product-name">Chana Dal</div>
+                            <div class="product-name">Chickpea Kabuli Dollar</div>
+                            <div class="product-name">Chickpea Deshi Small</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Cowpea Varieties</div>
+                            <div class="product-name">Cowpea Red Whole</div>
+                            <div class="product-name">Cowpea White Whole</div>
+                            <div class="product-name">Cowpea Dal Mogar</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Masoor Varieties</div>
+                            <div class="product-name">Masoor Whole</div>
+                            <div class="product-name">Masoor Malka</div>
+                            <div class="product-name">Masoor Dal Mogar</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Moong Varieties</div>
+                            <div class="product-name">Moong Whole</div>
+                            <div class="product-name">Moong Split Chilka</div>
+                            <div class="product-name">Moong Dal Mogar</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Specialty Pulses</div>
+                            <div class="product-name">Mix Dal</div>
+                            <div class="product-name">Rajma Chitra</div>
+                            <div class="product-name">Rajma Jammu</div>
+                            <div class="product-name">Rajma Red</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Other Pulses</div>
+                            <div class="product-name">Soyabean Whole</div>
+                            <div class="product-name">Urad Split Chilka</div>
+                            <div class="product-name">Urad Dal Mogar</div>
+                            <div class="product-name">Vatana</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Everyday Cereals Grains & Flours -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="category-title">Everyday Cereals Grains & Flours</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Wheat Products</div>
+                            <div class="product-name">Wheat Grains</div>
+                            <div class="product-name">Wheat Chakki Atta</div>
+                            <div class="product-name">Wheat Dalia</div>
+                            <div class="product-name">Wheat Suji</div>
+                            <div class="product-name">Wheat Maida</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthy Grains, Dalia & Atta -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="category-title">Healthy Grains, Dalia & Atta</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Ancient Grains</div>
+                            <div class="product-name">Amaranth</div>
+                            <div class="product-name">Quinoa</div>
+                            <div class="product-name">Oats</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Millets</div>
+                            <div class="product-name">Bajra Whole</div>
+                            <div class="product-name">Bajra Dalia</div>
+                            <div class="product-name">Bajra Atta</div>
+                            <div class="product-name">Jowar Whole</div>
+                            <div class="product-name">Jowar Dalia</div>
+                            <div class="product-name">Jowar Atta</div>
+                            <div class="product-name">Ragi Whole</div>
+                            <div class="product-name">Ragi Atta</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Barley Products</div>
+                            <div class="product-name">Barley Whole</div>
+                            <div class="product-name">Barley Dalia</div>
+                            <div class="product-name">Barley Atta</div>
+                            <div class="product-name">Pearl Barley</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Specialty Grains</div>
+                            <div class="product-name">Buckwheat Whole</div>
+                            <div class="product-name">Buckwheat Atta</div>
+                            <div class="product-name">Dehulled Buck Wheat Whole</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Maize Products</div>
+                            <div class="product-name">Maize Whole</div>
+                            <div class="product-name">Maize Dalia</div>
+                            <div class="product-name">Maize Atta</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Flours & Blends</div>
+                            <div class="product-name">Gluten Free Multigrain Dalia</div>
+                            <div class="product-name">Chana Besan</div>
+                            <div class="product-name">Multigrain Atta</div>
+                            <div class="product-name">Rice Dalia</div>
+                            <div class="product-name">Rice Atta</div>
+                            <div class="product-name">Soyabean Flour</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Everyday Spices -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mortar-pestle"></i>
+                        </div>
+                        <h3 class="category-title">Everyday Spices</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Whole Spices</div>
+                            <div class="product-name">Ajwain</div>
+                            <div class="product-name">Coriander Whole</div>
+                            <div class="product-name">Cumin Whole</div>
+                            <div class="product-name">Fennel Bold</div>
+                            <div class="product-name">Fenugreek</div>
+                            <div class="product-name">Kalonji</div>
+                            <div class="product-name">Mustard Black</div>
+                            <div class="product-name">Mustard Yellow</div>
+                            <div class="product-name">Rai</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Powdered Spices</div>
+                            <div class="product-name">Amchur Powder</div>
+                            <div class="product-name">Coriander Powder</div>
+                            <div class="product-name">Cumin Powder</div>
+                            <div class="product-name">Red Chilli Powder Hot</div>
+                            <div class="product-name">Red Chilli Powder Regular</div>
+                            <div class="product-name">Red Chilli Powder Supreme</div>
+                            <div class="product-name">Turmeric Powder</div>
+                            <div class="product-name">Ginger Powder</div>
+                            <div class="product-name">Garlic Powder</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Chilli Varieties</div>
+                            <div class="product-name">Red Chilli Flakes</div>
+                            <div class="product-name">Red Chilli Whole</div>
+                            <div class="product-name">Kashmiri Red Chilli Whole</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Salts</div>
+                            <div class="product-name">Black Salt</div>
+                            <div class="product-name">Rock Salt</div>
+                            <div class="product-name">Pink Salt</div>
+                            <div class="product-name">Pink Salt Crystal</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Seeds</div>
+                            <div class="product-name">Sesame Black Natural</div>
+                            <div class="product-name">Sesame White Dehulled</div>
+                            <div class="product-name">Sesame White Natural</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garam Masala -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <h3 class="category-title">Garam Masala</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Premium Spices</div>
+                            <div class="product-name">Bay Leaf Whole</div>
+                            <div class="product-name">Black Pepper Whole</div>
+                            <div class="product-name">Black Pepper Powder</div>
+                            <div class="product-name">Cardamom Large Black</div>
+                            <div class="product-name">Cinnamon Stick</div>
+                            <div class="product-name">Cinnamon Powder</div>
+                            <div class="product-name">Clove Whole</div>
+                            <div class="product-name">Green Cardamom Whole</div>
+                            <div class="product-name">Green Cardamom Powder</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Specialty Spices</div>
+                            <div class="product-name">Heeng Powder</div>
+                            <div class="product-name">Mace Whole</div>
+                            <div class="product-name">Nutmeg Whole</div>
+                            <div class="product-name">Shajeera Whole</div>
+                            <div class="product-name">White Pepper</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Categories (Condensed) -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-oil-can"></i>
+                        </div>
+                        <h3 class="category-title">Edible Oils & Ghee</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Oils</div>
+                            <div class="product-name">Coconut Oil</div>
+                            <div class="product-name">Groundnut Oil</div>
+                            <div class="product-name">Mustard Oil</div>
+                            <div class="product-name">Sesame Oil</div>
+                            <div class="product-name">Sunflower Oil</div>
+                            <div class="product-name">Castor Oil</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Dairy</div>
+                            <div class="product-name">Cow Ghee</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tea, Coffee, Sugar & Jaggery -->
+                <div class="product-categories-section wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <h3 class="category-title">Tea, Coffee, Sugar & Jaggery</h3>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <div class="product-subcategory">Beverages</div>
+                            <div class="product-name">Green Tea</div>
+                            <div class="product-name">CTC Tea</div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-subcategory">Sweeteners</div>
+                            <div class="product-name">Jaggery Cube</div>
+                            <div class="product-name">Jaggery Powder</div>
+                            <div class="product-name">Jaggery</div>
+                            <div class="product-name">Sugar</div>
+                            <div class="product-name">Brown Sugar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note about remaining categories -->
+                <div class="business-overview-card wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="business-content-premium">
+                        <p>
+                            <span class="highlight-premium">Complete Product Range Available</span> - In addition to the categories shown above, Morarka Organic also offers:
+                        </p>
+                        <div class="mt-4">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                                <div>
+                                    <h4 style="color: var(--Primary); margin-bottom: 15px;">• Rice & Snacks</h4>
+                                    <p>Basmati, Poha, Murmure, Roasted Chana, Peanuts</p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--Primary); margin-bottom: 15px;">• Health Foods</h4>
+                                    <p>Honey, Seeds, Moringa, Wheat Grass, Amla Products</p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--Primary); margin-bottom: 15px;">• Pasta & More</h4>
+                                    <p>Various Pastas, Noodles, Corn Starch</p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--Primary); margin-bottom: 15px;">• Special Products</h4>
+                                    <p>Chutneys, Papad, Rose Water, Masala Mixes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer"></div>
+
+    </div>
+    <!-- /#Wapper -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lazysize.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script type="text/javascript" src="js/odometer.min.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="js/count-down.js"></script>
+    <script type="text/javascript" src="js/jquery-validate.js"></script>
+    <script type="text/javascript" src="js/gsap-animation.js"></script>
+    <script type="text/javascript" src="js/gsap.min.js"></script>
+    <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="js/Splitetext.js"></script>
+    <script type="text/javascript" src="js/footer_load.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        // Initialize WOW.js for animations
+        new WOW().init();
+        
+        // Form submission handling
+        document.getElementById('businessEnquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.submit-btn-premium');
+            const originalText = submitBtn.innerHTML;
+            
+            // Simulate form submission
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Show success message
+                alert('Thank you for your business enquiry! Our team will contact you within 24-48 hours.');
+                
+                // Reset form
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Load header and footer
+            if (typeof loadHeaderFooter === 'function') {
+                loadHeaderFooter();
+            }
+            
+            // Product item hover effects
+            document.querySelectorAll('.product-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

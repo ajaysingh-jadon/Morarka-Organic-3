@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Quality & Assurance | Morarka Organic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" href="font/fonts.css">
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
+
+    <style>
+        /* Ultra Premium Quality Assurance Styling */
+        .quality-assurance-page {
+            background: #fdfdfd;
+            overflow-x: hidden;
+        }
+
+        /* Premium Content Section */
+        .quality-content-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(180deg, var(--White) 0%, #fafcf9 100%);
+            position: relative;
+        }
+
+        .quality-content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--Border-4), transparent);
+        }
+
+        /* Premium Quality Statement */
+        .quality-statement-premium {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .quality-statement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--Primary) 0%, var(--Bg-11) 100%);
+            color: var(--White);
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(13, 64, 28, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quality-statement-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+        }
+
+        .quality-statement-badge:hover::before {
+            animation: shine 1s ease;
+        }
+
+        @keyframes shine {
+            100% { transform: translateX(100%); }
+        }
+
+        .quality-statement-title {
+            font-size: 46px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin-bottom: 30px;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+        }
+
+        .quality-statement-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
+            border-radius: 2px;
+        }
+
+        /* Premium Content Card */
+        .quality-content-card {
+            background: var(--White);
+            border-radius: 28px;
+            padding: 80px;
+            margin: 0 auto;
+            max-width: 1100px;
+            border: 1px solid var(--Border-4);
+            box-shadow: 0 30px 80px rgba(13, 64, 28, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quality-content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--Primary), var(--Secondary), var(--Primary));
+            background-size: 200% 100%;
+            animation: gradientMove 3s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .quality-content-text {
+            font-size: 19px;
+            line-height: 1.9;
+            color: var(--Text);
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quality-content-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .quality-highlight {
+            color: var(--Primary);
+            font-weight: 700;
+            background: linear-gradient(120deg, rgba(13, 64, 28, 0.08) 0%, transparent 100%);
+            padding: 5px 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--Secondary);
+            position: relative;
+            display: inline-block;
+            margin: 2px 0;
+        }
+
+        /* Quality Metrics Section */
+        .quality-metrics-section {
+            padding: 100px 0;
+            background: var(--White);
+            position: relative;
+        }
+
+        .quality-metrics-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--Border-4), transparent);
+        }
+
+        .metrics-grid-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metric-card-premium {
+            background: var(--White);
+            border-radius: 24px;
+            padding: 60px 40px;
+            border: 1px solid var(--Border-4);
+            box-shadow: 0 20px 50px rgba(13, 64, 28, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .metric-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 64, 28, 0.02) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-card-premium:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px rgba(13, 64, 28, 0.12);
+            border-color: var(--Secondary);
+        }
+
+        .metric-card-premium:hover::before {
+            opacity: 1;
+        }
+
+        .metric-number-premium {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--Primary);
+            display: block;
+            margin-bottom: 20px;
+            line-height: 1;
+            font-family: 'Farmhouse', sans-serif;
+            text-shadow: 2px 2px 4px rgba(13, 64, 28, 0.1);
+        }
+
+        .metric-text-premium {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--Text-2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .metric-text-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--Secondary);
+        }
+
+        /* Quality Process Section */
+        .quality-process-premium {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #f8faf7 0%, var(--White) 100%);
+            position: relative;
+        }
+
+        .process-header-premium {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .process-title-premium {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .process-title-premium::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
+        }
+
+        .process-subtitle-premium {
+            font-size: 19px;
+            color: var(--Text);
+            max-width: 700px;
+            margin: 40px auto 0;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .process-steps-premium {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step-card {
+            background: var(--White);
+            border-radius: 24px;
+            padding: 50px 40px;
+            border: 1px solid var(--Border-4);
+            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.07);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .process-step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .process-step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 80px rgba(13, 64, 28, 0.12);
+        }
+
+        .process-step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-icon-premium {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--Primary), var(--Bg-11));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 20px 40px rgba(13, 64, 28, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-icon-premium::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite linear;
+        }
+
+        .step-icon-premium i {
+            font-size: 36px;
+            color: var(--White);
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number-premium {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--Secondary);
+            color: var(--Primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(248, 195, 44, 0.3);
+        }
+
+        .step-title-premium {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin-bottom: 20px;
+            font-family: 'Farmhouse', sans-serif;
+        }
+
+        .step-desc-premium {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--Text);
+        }
+
+        /* Certification Section Ultra Premium */
+        .certification-section-ultra {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--Primary) 0%, #1c4d2b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certification-section-ultra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/patterns/leaf-pattern-white.png') center/contain;
+            opacity: 0.08;
+        }
+
+        .certification-header-ultra {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .certification-title-ultra {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: var(--White);
+            font-family: 'Farmhouse', sans-serif;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .certification-tagline-ultra {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .certification-logos-ultra {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .certification-logo-ultra {
+            width: 200px;
+            height: 200px;
+            background: var(--White);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .certification-logo-ultra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+        }
+
+        .certification-logo-ultra:hover::before {
+            animation: logoShine 1s ease;
+        }
+
+        @keyframes logoShine {
+            100% { transform: translateX(100%); }
+        }
+
+        .certification-logo-ultra:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+            border-color: var(--Secondary);
+        }
+
+        .certification-logo-ultra img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(0.1);
+            transition: filter 0.3s ease;
+        }
+
+        .certification-logo-ultra:hover img {
+            filter: grayscale(0);
+        }
+
+        /* Trust Section */
+        .trust-section-premium {
+            padding: 100px 0;
+            background: var(--White);
+        }
+
+        .trust-card-premium {
+            background: linear-gradient(135deg, rgba(13, 64, 28, 0.03) 0%, rgba(248, 195, 44, 0.03) 100%);
+            border-radius: 28px;
+            padding: 80px 70px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--Border-4);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trust-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/patterns/grain-pattern.png') center/contain;
+            opacity: 0.05;
+        }
+
+        .trust-title-premium {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--Text-2);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Farmhouse', sans-serif;
+        }
+
+        .trust-text-premium {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--Text);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .quality-content-card {
+                padding: 70px 60px;
+                margin: 0 20px;
+            }
+            
+            .certification-logo-ultra {
+                width: 180px;
+                height: 180px;
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .quality-statement-title,
+            .certification-title-ultra {
+                font-size: 42px;
+            }
+            
+            .quality-content-card {
+                padding: 60px 50px;
+            }
+            
+            .metric-number-premium {
+                font-size: 56px;
+            }
+            
+            .certification-logos-ultra {
+                gap: 40px;
+            }
+            
+            .certification-logo-ultra {
+                width: 160px;
+                height: 160px;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quality-content-section,
+            .quality-process-premium {
+                padding: 80px 0;
+            }
+            
+            .quality-statement-title,
+            .certification-title-ultra {
+                font-size: 36px;
+            }
+            
+            .quality-content-card {
+                padding: 50px 40px;
+            }
+            
+            .quality-content-text {
+                font-size: 18px;
+            }
+            
+            .metrics-grid-premium,
+            .process-steps-premium {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .certification-logos-ultra {
+                gap: 30px;
+            }
+            
+            .certification-logo-ultra {
+                width: 150px;
+                height: 150px;
+                padding: 25px;
+            }
+            
+            .trust-card-premium {
+                padding: 60px 40px;
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .quality-statement-title,
+            .certification-title-ultra {
+                font-size: 32px;
+            }
+            
+            .quality-content-card {
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+            
+            .metric-number-premium {
+                font-size: 48px;
+            }
+            
+            .certification-logo-ultra {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .trust-title-premium {
+                font-size: 32px;
+            }
+            
+            .trust-text-premium {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body class="quality-assurance-page">
+    <div id="wrapper">
+        <div id="site-header"></div>
+
+        <!-- Quality Content Section -->
+        <section class="quality-content-section">
+            <div class="quality-statement-premium wow fadeInUp">
+                <span class="quality-statement-badge">Our Commitment</span>
+                <h1 class="quality-statement-title">Quality & Assurance</h1>
+            </div>
+
+            <div class="quality-content-card wow fadeInUp" data-wow-delay="0.1s">
+                <div class="quality-content-text">
+                    At <span class="quality-highlight">Morarka Organic Food Limited</span>, quality is not an outcome—it is a discipline woven into every stage of our organic value chain. Anchored in the principles of integrity, transparency, and ecological responsibility, we ensure that each product bearing the Morarka Organic name meets uncompromising standards of purity, safety, and nutritional excellence.
+                </div>
+                
+                <div class="quality-content-text">
+                    Our commitment begins at the farm level through the robust <span class="quality-highlight">Internal Control System (ICS)</span> developed by <span class="quality-highlight">Morarka Foundation</span>. This system governs every aspect of organic production: seed selection, cultivation practices, field monitoring, documentation, inspections, and final certification. With dedicated field teams conducting regular audits and residue testing, we maintain complete traceability from soil to shelf, ensuring that every grain, pulse, and spice reflects authentic organic integrity.
+                </div>
+                
+                <div class="quality-content-text">
+                    We view each farm as a dynamic ecological landscape—an environment where soil vitality, biodiversity, water stewardship, and natural pest cycles must be nurtured rather than disrupted. By promoting regenerative agriculture and eliminating synthetic chemicals, we protect not just the quality of our food but also the long-term health of the land and the communities that depend on it.
+                </div>
+                
+                <div class="quality-content-text">
+                    Our quality philosophy extends beyond compliance. We work closely with farmer groups to adopt sustainable techniques, improve post-harvest handling, and maintain hygienic processing conditions aligned with international standards. Every product moves through a carefully controlled supply chain—scientifically tested, ethically sourced, and handled with the utmost care.
+                </div>
+                
+                <div class="quality-content-text">
+                    Our vision reaches beyond our fields and facilities. We aspire to contribute to a culture where healthy, organic food is accessible, trusted, and valued. By collaborating with aligned organisations, supporting policy advocacy, and encouraging informed consumer choices, we help shape a future where safer food and sustainable living are within everyone's reach.
+                </div>
+                
+                <div class="quality-content-text">
+                    We invite you to experience the promise behind our products—a promise built on rigorous systems, responsible sourcing, and a deep respect for nature. With Morarka Organic, every meal becomes a small gesture toward personal well-being and a healthier planet.
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Metrics -->
+        <section class="quality-metrics-section">
+            <div class="metrics-grid-premium">
+                <div class="metric-card-premium wow fadeInUp">
+                    <span class="metric-number-premium">100%</span>
+                    <span class="metric-text-premium">Organic Integrity</span>
+                </div>
+                
+                <div class="metric-card-premium wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="metric-number-premium">0</span>
+                    <span class="metric-text-premium">Chemical Residue</span>
+                </div>
+                
+                <div class="metric-card-premium wow fadeInUp" data-wow-delay="0.2s">
+                    <span class="metric-number-premium">170+</span>
+                    <span class="metric-text-premium">Products Certified</span>
+                </div>
+                
+                <div class="metric-card-premium wow fadeInUp" data-wow-delay="0.3s">
+                    <span class="metric-number-premium">∞</span>
+                    <span class="metric-text-premium">Traceability</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Process -->
+        <section class="quality-process-premium">
+            <div class="process-header-premium wow fadeInUp">
+                <h2 class="process-title-premium">Our Quality Process</h2>
+                <p class="process-subtitle-premium">
+                    A systematic approach ensuring every product meets our uncompromising standards
+                </p>
+            </div>
+            
+            <div class="process-steps-premium">
+                <div class="process-step-card wow fadeInUp">
+                    <div class="step-number-premium">1</div>
+                    <div class="step-icon-premium">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="step-title-premium">Seed Selection</h3>
+                    <p class="step-desc-premium">Certified organic seeds and natural planting materials selected for purity and quality</p>
+                </div>
+                
+                <div class="process-step-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="step-number-premium">2</div>
+                    <div class="step-icon-premium">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="step-title-premium">Organic Cultivation</h3>
+                    <p class="step-desc-premium">Natural farming methods without synthetic chemicals or pesticides</p>
+                </div>
+                
+                <div class="process-step-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="step-number-premium">3</div>
+                    <div class="step-icon-premium">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="step-title-premium">Laboratory Testing</h3>
+                    <p class="step-desc-premium">Comprehensive scientific analysis for purity and safety</p>
+                </div>
+                
+                <div class="process-step-card wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="step-number-premium">4</div>
+                    <div class="step-icon-premium">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="step-title-premium">Certification</h3>
+                    <p class="step-desc-premium">Third-party verification by international organic certifying bodies</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Section -->
+        <section class="certification-section-ultra">
+            <div class="certification-header-ultra wow fadeInUp">
+                <h2 class="certification-title-ultra">Certified Organic</h2>
+                <p class="certification-tagline-ultra">Guaranteed purity and safety in every bite.</p>
+            </div>
+
+            <div class="certification-logos-ultra">
+                <div class="certification-logo-ultra wow fadeInUp">
+                    <img src="images/certifications/jaivik-bharat.png" alt="Jaivik Bharat Certification">
+                </div>
+                
+                <div class="certification-logo-ultra wow fadeInUp" data-wow-delay="0.1s">
+                    <img src="images/certifications/usda-organic.png" alt="USDA Organic Certification">
+                </div>
+                
+                <div class="certification-logo-ultra wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="images/certifications/india-organic.png" alt="India Organic Certification">
+                </div>
+                
+                <div class="certification-logo-ultra wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="images/certifications/eu-organic.png" alt="EU Organic Certification">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section-premium">
+            <div class="trust-card-premium wow fadeInUp">
+                <h3 class="trust-title-premium">Built on Trust, Delivered with Excellence</h3>
+                <p class="trust-text-premium">
+                    For over three decades, Morarka Organic has maintained an unbroken commitment to quality. Our certifications are not just labels—they represent our unwavering dedication to purity, transparency, and sustainable practices that benefit farmers, consumers, and the environment alike.
+                </p>
+            </div>
+        </section>
+
+        <div id="site-footer"></div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof WOW === 'function') {
+                new WOW({
+                    offset: 100,
+                    mobile: true,
+                    live: true
+                }).init();
+            }
+
+            function loadComponent(url, elementId) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading component:', error);
+                        document.getElementById(elementId).innerHTML = 
+                            '<div class="text-center py-5"><p>Component failed to load. Please check the file path.</p></div>';
+                    });
+            }
+
+            loadComponent('header.html', 'site-header');
+            loadComponent('footer.html', 'site-footer');
+        });
+    </script>
+</body>
+</html>
