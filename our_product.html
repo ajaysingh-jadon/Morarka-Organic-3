@@ -5,54 +5,267 @@
 <!--<![endif]-->
 
 <head>
-    <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <title>Product Basket | Morarka Organic</title>
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
     <meta name="description" content="Product Basket of Morarka Organic – Certified organic produce across India.">
     <meta name="keywords" content="organic products, cereals, pulses, spices, fruits, vegetables, morarka organic">
     <meta name="author" content="morarka organic">
-
-    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
-    <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
     <link rel="stylesheet" type="text/css" href="css/odometer.min.css">
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-    <!-- Animation -->
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate2.min.css">
     <link rel="stylesheet" type="text/css" href="css/textanimation.css">
-
-    <!-- Map -->
     <link rel="stylesheet" type="text/css" href="css/map.min.css">
-
-    <!-- Font -->
     <link rel="stylesheet" href="font/fonts.css">
-
-    <!-- Icons -->
     <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
     <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css">
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="images/logo/morarka_logo1.png">
     <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo1.png">
+
+    <style>
+    /* ═══════════════════════════════════════════════════════════
+       PB-CARD  —  slide-up overlay inside the card on hover
+       
+       Structure:
+         .pb-card                    ← outer wrapper, fixed height
+           .pb-card-image            ← background image fills card
+           .pb-card-front            ← title + icon always visible
+           .pb-card-overlay          ← slides UP from bottom on hover
+             .pb-overlay-header      ← sticky: icon + title
+             .pb-overlay-body        ← scrollable product tags
+             .pb-overlay-footer      ← sticky: shop button
+    ═══════════════════════════════════════════════════════════ */
+
+    /* ── CARD WRAPPER ────────────────────────────────────────── */
+    .pb-card {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;          /* clips the sliding overlay   */
+        height: 340px;             /* fixed height — adjust freely */
+        cursor: pointer;
+        box-shadow: 0 6px 28px rgba(45,106,79,0.13);
+        transition: box-shadow 0.35s ease, transform 0.35s ease;
+    }
+    .pb-card:hover {
+        box-shadow: 0 16px 48px rgba(45,106,79,0.25);
+        transform: translateY(-4px);
+    }
+
+    /* ── BACKGROUND IMAGE ────────────────────────────────────── */
+    .pb-card-image {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease;
+    }
+    .pb-card:hover .pb-card-image {
+        transform: scale(1.07);   /* subtle zoom */
+    }
+
+    /* dark gradient at the bottom so text is always readable */
+    .pb-card-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(15, 35, 18, 0.82) 0%,
+            rgba(15, 35, 18, 0.30) 50%,
+            rgba(15, 35, 18, 0.05) 100%
+        );
+    }
+
+    /* ── FRONT LABEL (always visible, hides on hover) ────────── */
+    .pb-card-front {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        padding: 22px 20px 20px;
+        z-index: 2;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .pb-card:hover .pb-card-front {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+
+    .pb-card-front .pf-icon {
+        width: 42px; height: 42px;
+        background: rgba(255,255,255,0.18);
+        border: 1.5px solid rgba(255,255,255,0.35);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        color: #fff; font-size: 18px;
+        margin-bottom: 10px;
+        backdrop-filter: blur(4px);
+    }
+    .pb-card-front .pf-title {
+        font-size: 19px; font-weight: 700;
+        color: #ffffff;
+        line-height: 1.25;
+        margin-bottom: 5px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .pb-card-front .pf-sub {
+        font-size: 12px;
+        color: rgba(255,255,255,0.75);
+        font-weight: 500;
+    }
+
+    /* ── OVERLAY (slides up from bottom on hover) ────────────── */
+    .pb-card-overlay {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 100%;               /* full card height             */
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.352);
+        backdrop-filter: blur(10px);
+        /* START: hidden below the card */
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.22, 0.68, 0, 1.1);
+        border-radius: 18px;
+    }
+    .pb-card:hover .pb-card-overlay {
+        transform: translateY(0);   /* slide into view */
+    }
+
+    /* ── OVERLAY HEADER (sticky inside overlay) ──────────────── */
+    .pb-overlay-header {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 16px 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .pb-overlay-icon {
+        width: 34px; height: 34px;
+        background: linear-gradient(135deg, #2d6a4f, #52b788);
+        border-radius: 9px;
+        display: flex; align-items: center; justify-content: center;
+        color: #fff; font-size: 14px;
+        flex-shrink: 0;
+    }
+    .pb-overlay-title {
+        font-size: 13px; font-weight: 700;
+        color: #ffffff;
+        line-height: 1.3;
+        flex: 1;
+    }
+
+    /* ── OVERLAY SCROLLABLE BODY ─────────────────────────────── */
+    .pb-overlay-body {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 12px 16px 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .pb-overlay-body::-webkit-scrollbar { width: 4px; }
+    .pb-overlay-body::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+    .pb-overlay-body::-webkit-scrollbar-thumb { background: #52b788; border-radius: 10px; }
+
+    /* ── PRODUCT GROUPS ─────────────────────────────────────── */
+    .pb-overlay-group { margin-bottom: 12px; }
+    .pb-overlay-group:last-child { margin-bottom: 4px; }
+
+    .pb-overlay-label {
+        font-size: 9.5px; font-weight: 700;
+        letter-spacing: 1.5px; text-transform: uppercase;
+        color: #52b788;
+        margin-bottom: 6px;
+    }
+    .pb-overlay-tags {
+        display: flex; flex-wrap: wrap; gap: 5px;
+    }
+    .pb-otag {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: rgba(255,255,255,0.9);
+        font-size: 11px; font-weight: 500;
+        padding: 3px 9px;
+        border-radius: 20px; line-height: 1.6;
+        transition: background 0.15s, color 0.15s;
+        white-space: nowrap;
+    }
+    .pb-otag:hover {
+        background: #2d6a4f;
+        color: #fff;
+        border-color: #2d6a4f;
+    }
+
+    /* ── OVERLAY FOOTER (sticky shop button) ─────────────────── */
+    .pb-overlay-footer {
+        flex-shrink: 0;
+        padding: 10px 16px 14px;
+        border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .pb-shop-btn {
+        display: block; width: 100%; text-align: center;
+        background: linear-gradient(135deg, #2d6a4f, #52b788);
+        color: #fff !important;
+        font-size: 13px; font-weight: 700;
+        padding: 9px 0; border-radius: 10px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        letter-spacing: 0.3px;
+    }
+    .pb-shop-btn:hover { opacity: 0.85; }
+
+    /* ═══════════════════════════════════════════════════════════
+       MOBILE ADJUSTMENTS
+       On small screens: tap opens overlay, tap again closes
+    ═══════════════════════════════════════════════════════════ */
+    @media (max-width: 767px) {
+        .pb-card { height: 300px; }
+
+        /* Disable CSS hover on touch screens */
+        .pb-card:hover .pb-card-overlay  { transform: translateY(100%); }
+        .pb-card:hover .pb-card-front    { opacity: 1; transform: none; pointer-events: auto; }
+        .pb-card:hover .pb-card-image    { transform: scale(1); }
+        .pb-card:hover                   { transform: none; box-shadow: 0 6px 28px rgba(45,106,79,0.13); }
+
+        /* JS adds .is-open on tap instead */
+        .pb-card.is-open .pb-card-overlay  { transform: translateY(0); }
+        .pb-card.is-open .pb-card-front    { opacity: 0; transform: translateY(10px); pointer-events: none; }
+        .pb-card.is-open .pb-card-image    { transform: scale(1.05); }
+
+        /* Tap hint */
+        .pb-tap-hint {
+            text-align: center;
+            font-size: 11.5px; font-weight: 600;
+            color: #40916c;
+            margin-top: 7px;
+        }
+    }
+    @media (min-width: 768px) {
+        .pb-tap-hint { display: none; }
+        /* On desktop, is-open not needed — pure CSS hover */
+        .pb-card.is-open .pb-card-overlay  { transform: translateY(100%); }
+        .pb-card.is-open .pb-card-front    { opacity: 1; }
+    }
+
+    /* tablet 2-col fix */
+    @media (max-width: 991px) and (min-width: 768px) {
+        .pb-card { height: 310px; }
+    }
+    </style>
 </head>
 
 <body>
-
 <div id="wrapper">
 
-    <!-- ===== HEADER (UNCHANGED) ===== -->
-     <div id="site-header"></div>
-     <!-- /.Header -->
+    <!-- HEADER -->
+    <div id="site-header"></div>
 
     <!-- Page Title -->
     <div class="page-title">
@@ -77,9 +290,8 @@
             <img src="images/item/grass.png" alt="">
         </div>
     </div>
-    <!-- /.Page-title -->
 
-    <!-- ===== PRODUCT BASKET SECTION ===== -->
+    <!-- PRODUCT BASKET SECTION -->
     <section class="tf-section bg-white pt-118 pb-88">
         <div class="tf-container w-1290">
 
@@ -88,437 +300,501 @@
                 <div class="col-lg-10 text-center">
                     <div class="heading-section">
                         <p class="sub-title">Our Organic Portfolio</p>
-                        <h2 class="title mb-10">Product Basket</h2>
+                        <!-- <h2 class="title mb-10">Product Basket</h2> -->
                         <p class="text">
-                            	The 100 plus project locations covering over 19 States and almost all agro climatic zones in India, around 1,00,000 farmers and over 10 years in this sector and is still growing every day has enabled Morarka Organic to gain experience in handling over 300 different agriculture products at the farm level. Due to value chain management solutions all developed through in house research, over 100 crops have been understood fairly well by us. 
+                            The 100 plus project locations covering over 19 States and almost all agro climatic
+                            zones in India, around 1,00,000 farmers and over 10 years in this sector and is still
+                            growing every day has enabled Morarka Organic to gain experience in handling over 300
+                            different agriculture products at the farm level.
                         </p>
                         <p class="text">
-                            About 130-150 crops-products currently qualify to be part of our core portfolio and are offered both as farm grade as well as processed and in retail packs. Being new, in the trade we are still not handling all the quantities that get produced as organic at the farm level. As we are progressing in our efforts to establish marketing linkages, we are not only expanding the portfolio on offer, we are also increasing the quantities by every crop season. The current crop - portfolio under cultivation & on offer is broadly categorized as follows
+                            About 130–150 crops-products currently qualify to be part of our core portfolio,
+                            offered both as farm grade and in retail packs.
+                            <strong>Hover over any card</strong> to explore available products.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- CARDS (HOME PAGE HOVER STYLE) -->
+            <!-- CARDS GRID -->
             <div class="row">
 
-    <!-- Cereals -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/cereal.webp"
-                     data-src="images/product/cereal.webp"
-                     alt="Cereals" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon hover02">
-                    <i class="fa-solid fa-wheat-awn"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Cereals
-                </a>
-                <p class="text font-nunito">
-                    Certified organic cereals grown across diverse agro-climatic zones.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+                <!-- ① Cereals -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card"
+                         style="background-image:none;">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/cereal.webp');"></div>
 
-    <!-- Pulses & Beans -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/beans.webp"
-                   data-src="images/product/beans.webp"
-                     alt="Pulses & Beans" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Pulses & Beans
-                </a>
-                <p class="text font-nunito">
-                    High-protein organic pulses and beans sourced from certified farms.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <!-- Front label (visible without hover) -->
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-wheat-awn"></i></div>
+                            <div class="pf-title">Cereals</div>
+                            <div class="pf-sub">Grains &amp; Flours</div>
+                        </div>
 
-    <!-- Sugarcane -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/sugar.jpg"
-                     data-src="images/product/sugar.jpg"
-                     alt="Sugarcane" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-candy-cane"></i>
+                        <!-- Overlay (slides up on hover) -->
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-wheat-awn"></i></div>
+                                <div class="pb-overlay-title">Everyday Cereal Grains &amp; Flours</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Wheat Products</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Wheat Grains</span>
+                                        <span class="pb-otag">Chakki Atta</span>
+                                        <span class="pb-otag">Wheat Dalia</span>
+                                        <span class="pb-otag">Wheat Suji</span>
+                                        <span class="pb-otag">Wheat Maida</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Rice</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Basmati Rice</span>
+                                        <span class="pb-otag">Rice Dalia</span>
+                                        <span class="pb-otag">Rice Atta</span>
+                                        <span class="pb-otag">Poha</span>
+                                        <span class="pb-otag">Murmure</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Flours &amp; Blends</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Multigrain Atta</span>
+                                        <span class="pb-otag">Soyabean Flour</span>
+                                        <span class="pb-otag">Chana Besan</span>
+                                        <span class="pb-otag">Corn Starch</span>
+                                        <span class="pb-otag">Gluten Free Dalia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=22" class="pb-shop-btn" target="_blank">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Cereals
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Sugarcane
-                </a>
-                <p class="text font-nunito">
-                    Sustainably grown organic sugarcane with complete traceability.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Spices -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/spices.jpg"
-                     data-src="images/product/spices.jpg"
-                     alt="Spices" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-pepper-hot"></i>
+                <!-- ② Pulses & Beans -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/beans.webp');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-seedling"></i></div>
+                            <div class="pf-title">Pulses &amp; Beans</div>
+                            <div class="pf-sub">Everyday Protein</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-seedling"></i></div>
+                                <div class="pb-overlay-title">Everyday Pulses &amp; Beans</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Chana &amp; Chickpea</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Chana Whole</span>
+                                        <span class="pb-otag">Chana Dal</span>
+                                        <span class="pb-otag">Kabuli Chickpea</span>
+                                        <span class="pb-otag">Deshi Chickpea</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Moong &amp; Masoor</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Moong Whole</span>
+                                        <span class="pb-otag">Moong Split Chilka</span>
+                                        <span class="pb-otag">Moong Dal Mogar</span>
+                                        <span class="pb-otag">Masoor Whole</span>
+                                        <span class="pb-otag">Masoor Malka</span>
+                                        <span class="pb-otag">Masoor Dal Mogar</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Urad, Rajma &amp; Others</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Arhar Dal</span>
+                                        <span class="pb-otag">Urad Split Chilka</span>
+                                        <span class="pb-otag">Urad Dal Mogar</span>
+                                        <span class="pb-otag">Rajma Red</span>
+                                        <span class="pb-otag">Rajma Chitra</span>
+                                        <span class="pb-otag">Rajma Jammu</span>
+                                        <span class="pb-otag">Cowpea Red</span>
+                                        <span class="pb-otag">Vatana</span>
+                                        <span class="pb-otag">Mix Dal</span>
+                                        <span class="pb-otag">Soyabean Whole</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=24" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Pulses
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Spices
-                </a>
-                <p class="text font-nunito">
-                    Aromatic organic spices cultivated and processed naturally.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-     <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/comidant.jpg"
-                     data-src="images/product/comidant.jpg"
-                     alt="Cereals" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon hover02">
-                    <i class="fa-solid fa-wheat-awn"></i>
+                <!-- ③ Spices & Condiments -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/spices.jpg');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-pepper-hot"></i></div>
+                            <div class="pf-title">Spices &amp; Condiments</div>
+                            <div class="pf-sub">Whole, Powdered &amp; Blended</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-pepper-hot"></i></div>
+                                <div class="pb-overlay-title">Spices &amp; Condiments</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Whole Spices</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Ajwain</span>
+                                        <span class="pb-otag">Cumin Whole</span>
+                                        <span class="pb-otag">Coriander Whole</span>
+                                        <span class="pb-otag">Fennel Bold</span>
+                                        <span class="pb-otag">Fenugreek</span>
+                                        <span class="pb-otag">Mustard Black</span>
+                                        <span class="pb-otag">Mustard Yellow</span>
+                                        <span class="pb-otag">Kalonji</span>
+                                        <span class="pb-otag">Rai</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Powdered Spices</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Turmeric Powder</span>
+                                        <span class="pb-otag">Red Chilli Hot</span>
+                                        <span class="pb-otag">Red Chilli Regular</span>
+                                        <span class="pb-otag">Cumin Powder</span>
+                                        <span class="pb-otag">Coriander Powder</span>
+                                        <span class="pb-otag">Ginger Powder</span>
+                                        <span class="pb-otag">Garlic Powder</span>
+                                        <span class="pb-otag">Amchur Powder</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Garam Masala &amp; Premium</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Clove Whole</span>
+                                        <span class="pb-otag">Green Cardamom</span>
+                                        <span class="pb-otag">Black Cardamom</span>
+                                        <span class="pb-otag">Cinnamon Stick</span>
+                                        <span class="pb-otag">Black Pepper Whole</span>
+                                        <span class="pb-otag">Bay Leaf</span>
+                                        <span class="pb-otag">Nutmeg</span>
+                                        <span class="pb-otag">Mace Whole</span>
+                                        <span class="pb-otag">Heeng Powder</span>
+                                        <span class="pb-otag">White Pepper</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Salts</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Rock Salt</span>
+                                        <span class="pb-otag">Black Salt</span>
+                                        <span class="pb-otag">Pink Salt</span>
+                                        <span class="pb-otag">Pink Salt Crystal</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=31" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Spices
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Condiments
-                </a>
-                <p class="text font-nunito">
-                    Certified organic cereals grown across diverse agro-climatic zones.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Processed Herbs - Vegetables -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/Fresh_Vegetables.avif"
-                   data-src="images/product/Fresh_Vegetables.avif"
-                     alt="Pulses & Beans" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-seedling"></i>
+                <!-- ④ Tea, Coffee, Sugar & Jaggery -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/tea.jfif');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-mug-hot"></i></div>
+                            <div class="pf-title">Tea, Coffee &amp; Jaggery</div>
+                            <div class="pf-sub">Beverages &amp; Sweeteners</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-mug-hot"></i></div>
+                                <div class="pb-overlay-title">Tea, Coffee, Sugar &amp; Jaggery</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Beverages</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Green Tea</span>
+                                        <span class="pb-otag">CTC Tea</span>
+                                        <span class="pb-otag">Coffee</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Sweeteners</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Sugar</span>
+                                        <span class="pb-otag">Brown Sugar</span>
+                                        <span class="pb-otag">Jaggery</span>
+                                        <span class="pb-otag">Jaggery Powder</span>
+                                        <span class="pb-otag">Jaggery Cube</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=32" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Tea &amp; Sugar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                   Processed Herbs - Vegetables
-                </a>
-                <p class="text font-nunito">
-                    High-protein organic pulses and beans sourced from certified farms.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Oilseeds & Edible Oils-->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/Oilseeds.jpg"
-                    data-src="images/product/Oilseeds.jpg"
-                     alt="Sugarcane" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-candy-cane"></i>
+                <!-- ⑤ Nuts & Dry Fruits -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/dry_fruit.jpg');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="pf-title">Nuts &amp; Dry Fruits</div>
+                            <div class="pf-sub">Premium Organic Selection</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="pb-overlay-title">Nuts &amp; Dry Fruits</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Nuts</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Almonds</span>
+                                        <span class="pb-otag">Cashews</span>
+                                        <span class="pb-otag">Walnuts</span>
+                                        <span class="pb-otag">Peanuts</span>
+                                        <span class="pb-otag">Roasted Chana</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Dry Fruits</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Raisins</span>
+                                        <span class="pb-otag">Dates</span>
+                                        <span class="pb-otag">Figs</span>
+                                        <span class="pb-otag">Apricots</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Seeds</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Flax Seeds</span>
+                                        <span class="pb-otag">Pumpkin Seeds</span>
+                                        <span class="pb-otag">Sunflower Seeds</span>
+                                        <span class="pb-otag">Chia Seeds</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=26" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Nuts
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Oilseeds & Edible Oils
-                </a>
-                <p class="text font-nunito">
-                    Sustainably grown organic sugarcane with complete traceability.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--Milk & Clarified Butter (Ghee) -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/Milk_Butter.webp"
-                data-src="images/product/Milk_Butter.webp"
-                     alt="Spices" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-pepper-hot"></i>
+                <!-- ⑥ Ketchup & Chutney -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/comidant.jpg');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-jar"></i></div>
+                            <div class="pf-title">Ketchup &amp; Chutney</div>
+                            <div class="pf-sub">Organic Condiments</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-jar"></i></div>
+                                <div class="pb-overlay-title">Ketchup &amp; Chutney</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Ketchup &amp; Sauces</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Tomato Ketchup</span>
+                                        <span class="pb-otag">Chilli Sauce</span>
+                                        <span class="pb-otag">Mixed Veg Sauce</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Chutneys</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Mango Chutney</span>
+                                        <span class="pb-otag">Mint Chutney</span>
+                                        <span class="pb-otag">Tamarind Chutney</span>
+                                        <span class="pb-otag">Amla Chutney</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Pickles &amp; Others</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Mango Pickle</span>
+                                        <span class="pb-otag">Mixed Pickle</span>
+                                        <span class="pb-otag">Papad</span>
+                                        <span class="pb-otag">Rose Water</span>
+                                        <span class="pb-otag">Masala Mixes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=25" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Chutneys
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                   Milk & Clarified Butter (Ghee)
-                </a>
-                <p class="text font-nunito">
-                    Aromatic organic spices cultivated and processed naturally.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-     <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/tea.jfif"
-                     data-src="images/product/tea.jfif"
-                     alt="Cereals" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon hover02">
-                    <i class="fa-solid fa-wheat-awn"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Tea & Coffee
-                </a>
-                <p class="text font-nunito">
-                    Certified organic cereals grown across diverse agro-climatic zones.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--  Fruits -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/fruit.jpg"
-                   data-src="images/product/fruit.jpg"
-                     alt="Pulses & Beans" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-seedling"></i>
+                <!-- ⑦ Edible Oil & Ghee -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/Oilseeds.jpg');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-oil-can"></i></div>
+                            <div class="pf-title">Edible Oil &amp; Ghee</div>
+                            <div class="pf-sub">Cold-Pressed &amp; Pure</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-oil-can"></i></div>
+                                <div class="pb-overlay-title">Edible Oil &amp; Ghee</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Cold-Pressed Oils</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Coconut Oil</span>
+                                        <span class="pb-otag">Groundnut Oil</span>
+                                        <span class="pb-otag">Mustard Oil</span>
+                                        <span class="pb-otag">Sesame Oil</span>
+                                        <span class="pb-otag">Sunflower Oil</span>
+                                        <span class="pb-otag">Castor Oil</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Dairy</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Cow Ghee</span>
+                                        <span class="pb-otag">Clarified Butter</span>
+                                        <span class="pb-otag">Organic Milk</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/SubCategoryView.aspx?id=23" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Oils &amp; Ghee
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                     Fruits
-                </a>
-                <p class="text font-nunito">
-                    High-protein organic pulses and beans sourced from certified farms.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Fresh Vegetables -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/Fresh_Vegetables.avif"
-                    data-src="images/product/Fresh_Vegetables.avif"
-                     alt="Sugarcane" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-candy-cane"></i>
+                <!-- ⑧ Millets, Dalia & Atta -->
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="pb-card">
+                        <div class="pb-card-image"
+                             style="background-image:url('images/product/Milk_Butter.webp');"></div>
+                        <div class="pb-card-front">
+                            <div class="pf-icon"><i class="fas fa-heart"></i></div>
+                            <div class="pf-title">Millets, Dalia &amp; Atta</div>
+                            <div class="pf-sub">Ancient Grains &amp; Flours</div>
+                        </div>
+                        <div class="pb-card-overlay">
+                            <div class="pb-overlay-header">
+                                <div class="pb-overlay-icon"><i class="fas fa-heart"></i></div>
+                                <div class="pb-overlay-title">Millets, Dalia &amp; Atta</div>
+                            </div>
+                            <div class="pb-overlay-body">
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Millets</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Bajra Whole</span>
+                                        <span class="pb-otag">Bajra Dalia</span>
+                                        <span class="pb-otag">Bajra Atta</span>
+                                        <span class="pb-otag">Jowar Whole</span>
+                                        <span class="pb-otag">Jowar Dalia</span>
+                                        <span class="pb-otag">Jowar Atta</span>
+                                        <span class="pb-otag">Ragi Whole</span>
+                                        <span class="pb-otag">Ragi Atta</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Ancient Grains</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Amaranth</span>
+                                        <span class="pb-otag">Quinoa</span>
+                                        <span class="pb-otag">Oats</span>
+                                        <span class="pb-otag">Buckwheat Whole</span>
+                                        <span class="pb-otag">Buckwheat Atta</span>
+                                        <span class="pb-otag">Barley Whole</span>
+                                        <span class="pb-otag">Pearl Barley</span>
+                                    </div>
+                                </div>
+                                <div class="pb-overlay-group">
+                                    <div class="pb-overlay-label">Dalia &amp; Atta</div>
+                                    <div class="pb-overlay-tags">
+                                        <span class="pb-otag">Maize Whole</span>
+                                        <span class="pb-otag">Maize Dalia</span>
+                                        <span class="pb-otag">Maize Atta</span>
+                                        <span class="pb-otag">Barley Dalia</span>
+                                        <span class="pb-otag">Barley Atta</span>
+                                        <span class="pb-otag">Multigrain Atta</span>
+                                        <span class="pb-otag">Gluten Free Dalia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-overlay-footer">
+                                <a href="https://www.downtoearthorganicfood.com/Products.aspx?id=34&&ctype=subCat&&SubCat=ATTA" class="pb-shop-btn">
+                                    <i class="fas fa-shopping-cart" style="margin-right:6px;"></i>Shop Millets
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pb-tap-hint">👆 Tap to see products</p>
                 </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                   Fresh Vegetables
-                </a>
-                <p class="text font-nunito">
-                    Sustainably grown organic sugarcane with complete traceability.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- S Nuts & Dry - fruits -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/dry_fruit.jpg"
-                     data-src="images/product/dry_fruit.jpg"
-                     alt="Spices" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-pepper-hot"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                     Nuts & Dry - fruits
-                </a>
-                <p class="text font-nunito">
-                    Aromatic organic spices cultivated and processed naturally.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Cotton & Textiles-->
-     <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/cotton.jpg"
-                    data-src="images/product/cotton.jpg"
-                     alt="Cereals" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon hover02">
-                    <i class="fa-solid fa-wheat-awn"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                     Cotton & Textiles
-                </a>
-                <p class="text font-nunito">
-                    Certified organic cereals grown across diverse agro-climatic zones.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--  Processed Products -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/Processed_product.jpg"
-                   data-src="images/product/Processed_product.jpg"
-                     alt="Pulses & Beans" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                     Processed Products
-                </a>
-                <p class="text font-nunito">
-                    High-protein organic pulses and beans sourced from certified farms.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Organic Agriculture Inputs -->
-    <div class="col-lg-4 col-md-6 mb-30">
-        <div class="box-portfolio style-4 tf-img-hover">
-            <div class="image hover01">
-                <img src="images/product/orgnic.avif"
-                    data-src="images/product/orgnic.avif"
-                     alt="Sugarcane" class="lazyload">
-            </div>
-            <div class="content">
-                <div class="icon">
-                    <i class="fa-solid fa-candy-cane"></i>
-                </div>
-                <a href="#" class="title fs-22 font-worksans fw-6 hover-text-4">
-                    Organic Agriculture Inputs
-                </a>
-                <p class="text font-nunito">
-                    Sustainably grown organic sugarcane with complete traceability.
-                </p>
-                <div class="bot">
-                    <a href="#" class="btn-read font-worksans fw-5">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-   
-
-  
-</div>
-
-        </div>
+            </div><!-- /.row -->
+        </div><!-- /.tf-container -->
     </section>
 
-    
-
-    <!-- ===== FOOTER===== -->
-     <div id="site-footer"></div>
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
 
 </div><!-- /#wrapper -->
 
-<!-- ===== JS FILES ===== -->
+<!-- JS FILES -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/lazysize.min.js"></script>
@@ -532,11 +808,49 @@
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/jquery-validate.js"></script>
 <script type="text/javascript" src="js/rellax.min.js"></script>
-<script>
-    var rellax = new Rellax(".rellax");
-</script>
+<script>var rellax = new Rellax(".rellax");</script>
 <script type="text/javascript" src="js/footer_load.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+<script>
+
+(function () {
+    function isMobile() { return window.innerWidth < 768; }
+
+    var cards = document.querySelectorAll('.pb-card');
+
+    function closeAll() {
+        cards.forEach(function (c) { c.classList.remove('is-open'); });
+    }
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function (e) {
+            if (!isMobile()) return;
+
+            /* Allow shop button link to work normally */
+            if (e.target.closest('.pb-shop-btn')) return;
+
+            if (card.classList.contains('is-open')) {
+                closeAll();
+            } else {
+                closeAll();
+                card.classList.add('is-open');
+            }
+            e.stopPropagation();
+        });
+    });
+
+    /* Tap outside any card → close all */
+    document.addEventListener('click', function (e) {
+        if (isMobile() && !e.target.closest('.pb-card')) closeAll();
+    });
+
+    /* Reset on resize */
+    window.addEventListener('resize', function () {
+        if (!isMobile()) closeAll();
+    });
+})();
+</script>
 
 </body>
 </html>

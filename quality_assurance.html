@@ -48,8 +48,7 @@
 
 
         .quality-section {
-            padding-top: 100px;
-            padding-bottom: 100px;
+           
             position: relative;
         }
 
@@ -70,7 +69,7 @@
             overflow: hidden;
         }
 
-        .quality-card-premium::before {
+        /* .quality-card-premium::before {
             content: '';
             position: absolute;
             top: 0;
@@ -78,7 +77,7 @@
             width: 6px;
             height: 100%;
             background: linear-gradient(90deg, var(--Primary), var(--Secondary));
-        }
+        } */
 
         .quality-header-premium {
 
@@ -119,6 +118,49 @@
             color: var(--Primary);
             font-weight: 600;
             display: inline-block;
+        }
+
+        /* NEW premium bullet list */
+        .premium-bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .premium-bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--Text);
+            border-bottom: 1px dashed rgba(13, 64, 28, 0.1);
+            padding-bottom: 18px;
+        }
+
+        .premium-bullet-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .bullet-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--Primary), #2b8250);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            box-shadow: 0 10px 18px rgba(13, 64, 28, 0.2);
+            margin-top: 4px;
+        }
+
+        .bullet-icon i {
+            font-size: 14px;
         }
 
         /* Quality Pillars */
@@ -372,23 +414,16 @@
         .certification-logo-premium {
             width: 180px;
             height: 180px;
-            background: var(--White);
-            border-radius: 20px;
+
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-           
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+
             margin: 0 auto;
         }
 
-        .certification-logo-premium:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
-            border-color: var(--Secondary);
-        }
 
         .certification-logo-premium img {
             max-width: 100%;
@@ -593,7 +628,7 @@
         }
 
         .quality-process-premium {
-            padding: 120px 0;
+            padding: 50px 0;
             background: linear-gradient(180deg, #f8faf7 0%, var(--White) 100%);
             position: relative;
         }
@@ -735,6 +770,10 @@
             line-height: 1.7;
             color: var(--Text);
         }
+        .page-title
+        {
+            background-image: url("images/farms/farmer-working6.jpg");
+        }
     </style>
 </head>
 
@@ -794,7 +833,7 @@
         <!-- Main Content -->
         <div class="main-content quality-page">
 
-            <!-- Quality & Assurance Section -->
+            <!-- Quality & Assurance Section - REPLACED WITH NEW BULLET CONTENT -->
             <section class="quality-section tf-container w-1290">
                 <div class="section-header-premium wow fadeInUp">
                     <span class="section-badge-premium">quality is not an outcome—it is a discipline</span>
@@ -804,64 +843,56 @@
                         purity, safety, and nutritional excellence
                     </p>
                 </div>
-                <div class="quality-card-premium wow fadeInUp  ">
-                    <div class="quality-header-premium">
-                        <h2 class="quality-title-premium">Quality & Assurance</h2>
-                    </div>
+                <div class="quality-card-premium wow fadeInUp">
+                   
 
                     <div class="quality-text-premium">
-                        <p>
-                            At <span class="highlight-quality">Morarka Organic Food Limited</span>, quality is not an
-                            outcome—it is a discipline woven into every stage of our organic value chain. Anchored in
-                            the principles of integrity, transparency, and ecological responsibility, we ensure that
-                            each product bearing the Morarka Organic name meets uncompromising standards of purity,
-                            safety, and nutritional excellence.
-                        </p>
-
-                        <p>
-                            Our commitment begins at the farm level through the robust <span
-                                class="highlight-quality">Internal Control System (ICS)</span> developed by <span
-                                class="highlight-quality">Morarka Foundation</span>. This system governs every aspect of
-                            organic production: seed selection, cultivation practices, field monitoring, documentation,
-                            inspections, and final certification. With dedicated field teams conducting regular audits
-                            and residue testing, we maintain complete traceability from soil to shelf, ensuring that
-                            every grain, pulse, and spice reflects authentic organic integrity.
-                        </p>
-
-                        <p>
-                            We view each farm as a dynamic ecological landscape—an environment where soil vitality,
-                            biodiversity, water stewardship, and natural pest cycles must be nurtured rather than
-                            disrupted. By promoting regenerative agriculture and eliminating synthetic chemicals, we
-                            protect not just the quality of our food but also the long-term health of the land and the
-                            communities that depend on it.
-                        </p>
-
-                        <p>
-                            Our quality philosophy extends beyond compliance. We work closely with farmer groups to
-                            adopt sustainable techniques, improve post-harvest handling, and maintain hygienic
-                            processing conditions aligned with international standards. Every product moves through a
-                            carefully controlled supply chain—scientifically tested, ethically sourced, and handled with
-                            the utmost care.
-                        </p>
-
-                        <p>
-                            Our vision reaches beyond our fields and facilities. We aspire to contribute to a culture
-                            where healthy, organic food is accessible, trusted, and valued. By collaborating with
-                            aligned organisations, supporting policy advocacy, and encouraging informed consumer
-                            choices, we help shape a future where safer food and sustainable living are within
-                            everyone's reach.
-                        </p>
-
-                        <p>
-                            We invite you to experience the promise behind our products—a promise built on rigorous
-                            systems, responsible sourcing, and a deep respect for nature. With Morarka Organic, every
-                            meal becomes a small gesture toward personal well-being and a healthier planet.
-                        </p>
+                        <!-- NEW PREMIUM BULLET LIST  -->
+                        <ul class="premium-bullet-list">
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> At Morarka Organic Food
+                                Limited, quality is treated as a disciplined process, integrated across every stage of
+                                the organic value chain rather than as a final outcome.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our approach is anchored
+                                in the principles of integrity, transparency, and ecological responsibility, ensuring
+                                uncompromising standards of purity, safety, and nutritional excellence.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Quality assurance begins
+                                at the farm level through a robust Internal Control System (ICS) developed by the
+                                Morarka Foundation.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> The ICS governs all
+                                aspects of organic production, including seed selection, cultivation practices, field
+                                monitoring, documentation, inspections, and certification.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Dedicated field teams
+                                conduct regular audits and residue testing, ensuring complete traceability from soil to
+                                shelf across grains, pulses, and spices.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Each farm is viewed as a
+                                living ecological system where soil health, biodiversity, water stewardship, and natural
+                                pest cycles are nurtured rather than disrupted.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> By promoting regenerative
+                                agriculture and eliminating synthetic chemicals, we safeguard long-term land health and
+                                community well-being.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our quality philosophy
+                                goes beyond regulatory compliance through close collaboration with farmer groups.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> We support the adoption of
+                                sustainable farming techniques, improved post-harvest handling, and hygienic processing
+                                aligned with international standards.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Every product passes
+                                through a carefully controlled supply chain and is scientifically tested, ethically
+                                sourced, and responsibly handled.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our vision extends beyond
+                                production to fostering a culture where organic food is accessible, trusted, and valued.
+                            </li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Through partnerships,
+                                policy advocacy, and informed consumer engagement, we contribute toward safer food
+                                systems and sustainable living.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> We invite you to
+                                experience the promise behind our products—rooted in rigorous systems, responsible
+                                sourcing, and deep respect for nature.</li>
+                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> With Morarka Organic,
+                                every meal supports personal well-being and a healthier planet.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
-
-
 
 
             <!-- ICS Process Section -->
@@ -970,7 +1001,7 @@
                                     <img src="images/certification/mese.png" alt="EU Organic Certification">
                                 </div>
                             </div>
-                            
+
                             <div class="swiper-slide">
                                 <div class="certification-logo-premium wow fadeInUp" data-wow-delay="0.3s">
                                     <img src="images/certification/apeda.png" alt="EU Organic Certification">
@@ -1000,7 +1031,7 @@
     <script type="text/javascript" src="js/counter.js"></script>
     <script type="text/javascript" src="js/count-down.js"></script>
     <script type="text/javascript" src="js/jquery-validate.js"></script>
-    <script type="text/javascript" src="js/gsap-animation.js"></script>
+    <script type="text/javascript" src="js/gsanimation.js"></script>
     <script type="text/javascript" src="js/gsap.min.js"></script>
     <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="js/Splitetext.js"></script>

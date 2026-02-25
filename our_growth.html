@@ -105,7 +105,7 @@
 
         /* Premium Section Styles */
         .premium-section {
-            padding: 120px 0;
+            padding: 50px 0;
             position: relative;
         }
 
@@ -124,7 +124,7 @@
 
         .section-header-premium {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -141,7 +141,7 @@
             font-size: 15px;
             font-weight: 700;
             letter-spacing: 2px;
-            margin-bottom: 25px;
+         
             text-transform: uppercase;
             position: relative;
             overflow: hidden;
@@ -172,17 +172,7 @@
             display: inline-block;
         }
 
-        /* .section-title-premium::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 4px;
-            background: linear-gradient(to right, var(--Primary), var(--Secondary));
-            border-radius: 2px;
-        } */
+     
 
         .premium-section.dark-bg .section-title-premium {
             color: var(--White);
@@ -326,7 +316,7 @@
         /* Premium Stats Grid */
         .premium-stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 35px;
             margin: 70px 0;
         }
@@ -374,7 +364,7 @@
         }
 
         .stat-number-premium {
-            font-size: 56px;
+            font-size: 30px;
             font-weight: 900;
             color: var(--Primary);
             margin-bottom: 15px;
@@ -451,7 +441,7 @@
             font-weight: 800;
             border-radius: 6px;
             display: inline-block;
-            
+
         }
 
         /* Premium List Styles */
@@ -849,6 +839,33 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Premium Icon List Upgrade */
+        .icon-list-premium li {
+            padding-left: 45px !important;
+            font-family: "Nunito Sans", sans-serif !important;
+            position: relative;
+        }
+
+        .icon-list-premium li::before {
+            display: none;
+            /* remove default tick */
+        }
+
+        .list-icon-premium {
+            position: absolute;
+            left: 0;
+            top: 22px;
+            font-size: 18px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--Primary), var(--Secondary));
+            color: var(--White);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 
     <!--[if lt IE 9]>
@@ -880,7 +897,7 @@
                                     Firmly rooted in tradition
                                 </p>
                                 <h1 class="title">
-                                    Our Story - Our Growth
+                                    Our Growth
                                 </h1>
                                 <div class="icon-img">
                                     <img src="images/item/line-throw-title.png" alt="">
@@ -966,7 +983,7 @@
                     <!-- <h3 class="content-title-premium">From Direct Procurement to National Network</h3> -->
                     <div class="content-body-premium">
                         <p>
-                            <span class="highlight-premium">Morarka Organic Food Limited began with direct procurement
+                            <span class="highlight-premium">Morarka Organic Foods Limited began with direct procurement
                                 of organic produce from farms</span> and its supply to organic trade partners. Over
                             time, operations expanded to include year-round storage, enabling greater aggregation of
                             farm-level produce to meet market demand. Responding to the growing need for processed
@@ -984,36 +1001,79 @@
         </section>
 
         <!-- Value Chain Management -->
+       
         <section class="premium-section accent-bg">
             <div class="tf-container w-1290">
                 <div class="section-header-premium">
                     <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
-                        <i class="fas fa-network-wired me-2"></i> Integrated Approach
+                        <i class="fas fa-network-wired me-2"></i> Integrated Value Chain
                     </span>
-                    <h2 class="section-title-premium  wow fadeInUp" data-wow-delay="0.2s">
-                        Cultivation to Value Chain Management
+                    <h2 class="section-title-premium wow fadeInUp" data-wow-delay="0.2s">
+                        Cultivation, Storage, Processing & Value Addition
                     </h2>
                 </div>
 
-                <div class="premium-content-card wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="content-icon-premium">
-                        <i class="fas fa-tractor"></i>
-                    </div>
-                    <!-- <h3 class="content-title-premium">Complete Value Chain Integration</h3> -->
-                    <div class="content-body-premium">
-                        <p>
-                            With strong technical expertise in organic cultivation, MOFL has successfully introduced
-                            organic farming across <span class="highlight-premium">multiple agro-climatic zones of
-                                India</span>. To meet rising demand for value-added products, the company strengthened
-                            its value chain management capabilities by developing farmer-friendly tools, small-scale
-                            processing solutions, and in-house technologies such as <span class="highlight-premium">CO₂
-                                fumigation for extended organic storage</span>.
-                        </p>
-                        <p class="mt-4">
-                            Focused on delivering certified organic produce at affordable prices, MOFL continues to
-                            enhance its packaging and logistics solutions to ensure quality and shelf stability.
-                        </p>
-                    </div>
+                <div class="premium-list-container wow fadeInUp" data-wow-delay="0.3s">
+
+                    <p class="content-body-premium mb-4 text-center">
+                        Morarka Organic Foods Limited (MOFL) has expanded organic cultivation across
+                        multiple agro-climatic zones of India through strong technical expertise and
+                        farmer engagement.
+                    </p>
+
+                    <ul class="premium-list icon-list-premium">
+
+                        <li>
+                            <i class="fas fa-seedling list-icon-premium font-nunito"></i>
+                            Built an integrated, end-to-end organic value chain covering cultivation,
+                            storage, processing, and value addition.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-tools list-icon-premium"></i>
+                            Strengthened value chain capabilities with farmer-friendly tools,
+                            small-scale processing solutions, and robust organic storage systems
+                            to meet rising demand for value-added products.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-flask list-icon-premium"></i>
+                            Addressed the lack of organic-compliant technologies through intensive
+                            in-house R&D.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-warehouse list-icon-premium"></i>
+                            Introduced chemical-free farm-level storage using airtight metal bins
+                            and masonry units, adopted by 10,000+ farmers.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-atom list-icon-premium"></i>
+                            Developed advanced CO₂ fumigation technology for large-scale organic storage,
+                            positioning MOFL among the first three organizations globally to master this method.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-solar-panel list-icon-premium"></i>
+                            Innovated solar-based dehydration and other crop-specific processing technologies &
+                            machineries.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-industry list-icon-premium"></i>
+                            Developed 30+ organic processing technologies in the last three years.
+                        </li>
+
+                        <li>
+                            <i class="fas fa-truck-loading list-icon-premium"></i>
+                            Continuously enhancing packaging, cold warehouse storage, and logistics
+                            to ensure certified organic produce with consistent quality, safety,
+                            and shelf stability from farm to market—improving overall product shelf life.
+                        </li>
+
+                    </ul>
+
                 </div>
             </div>
         </section>
@@ -1046,7 +1106,8 @@
                         <p class="mt-4">
                             Additionally, partnerships with high-capacity and high-quality processing units have
                             strengthened operational efficiency. Within the first five years, MOFL successfully
-                            collaborated with <span class="highlight-premium">over 300 entrepreneurs across India</span>,
+                            collaborated with <span class="highlight-premium">over 300 entrepreneurs across
+                                India</span>,
                             significantly expanding its organic footprint.
                         </p>
                     </div>
@@ -1117,8 +1178,8 @@
             </div>
         </section> -->
 
-        <!-- Infrastructure Section -->
-        <section class="premium-section">
+       
+        <!-- <section class="premium-section">
             <div class="tf-container w-1290">
                 <div class="section-header-premium">
                     <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
@@ -1138,18 +1199,19 @@
                         <p>
                             Backed by the <span class="highlight-premium">Morarka Foundation</span>—an outcome of
                             corporate philanthropy by Gannon Dunkerley & Company Ltd. and the philanthropic vision of
-                            Mr. Kamal Morarka—Morarka Organic Food Limited benefits from a strong, self-sustained
+                            Mr. Kamal Morarka—Morarka Organic Foods Limited benefits from a strong, self-sustained
                             infrastructure. From its inception, the organization invested in skilled human resources,
                             robust facilities, and appropriate technologies to ensure efficient and scalable operations.
                         </p>
                         <p class="mt-4">
-                            As the front-end business arm of the Foundation, Morarka Organic leverages this shared
+                            As the front-end business arm of the Foundation, Morarka Organic Foods Limited leverages
+                            this shared
                             infrastructure to provide effective market linkages to organic farmers across India.
                         </p>
                     </div>
                 </div>
 
-                <!-- Office & Field Presence -->
+               
                 <div class="premium-map-section wow fadeInUp" data-wow-delay="0.4s">
                     <h3 class="content-title-premium text-center mb-4">Offices & Field Presence</h3>
                     <p class="content-body-premium text-center">
@@ -1189,10 +1251,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- R&D Section -->
-        <section class="premium-section dark-bg">
+        <section class="premium-section accent-bg">
             <div class="tf-container w-1290">
                 <div class="section-header-premium">
                     <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
@@ -1211,7 +1273,7 @@
                     <div class="content-body-premium">
                         <p>
                             Research and Development is a cornerstone of Morarka Organic's success. <span
-                                class="highlight-premium" style="background: rgba(248,195,44,0.2);">Over 70% of internal
+                                class="highlight-premium">Over 70% of internal
                                 resources</span> have been invested in developing innovative, field-tested
                             solutions—many of which are first-of-their-kind in organic agriculture. Rather than
                             laboratory-bound trials, all R&D is conducted directly on farmers' fields, enabling rapid
@@ -1219,7 +1281,7 @@
                         </p>
                         <p class="mt-4">
                             Over the last decade, Morarka Organic has developed organic cultivation practices for <span
-                                class="highlight-premium" style="background: rgba(248,195,44,0.2);">180+ crops</span>
+                                class="highlight-premium">180+ crops</span>
                             across nearly 10 agro-climatic zones of India, establishing itself as a leading resource
                             organization in the sector.
                         </p>
@@ -1240,7 +1302,7 @@
                         <li>Advanced vermiculture and enrichment processes</li>
                         <li>Plant-extract–based probiotic pest management</li>
                         <li>Scientific waste management solutions</li>
-                        
+
                     </ul>
 
                     <p class="content-body-premium mt-4">
@@ -1250,7 +1312,7 @@
                         biotechnology trainees from leading institutions.
                     </p>
                 </div>
-                <div class="premium-list-container wow fadeInUp" data-wow-delay="0.4s">
+                <!-- <div class="premium-list-container wow fadeInUp" data-wow-delay="0.4s">
                     <h3 class="content-title-premium mb-4">Storage, Processing & Value Addition</h3>
                     <p class="content-body-premium mb-4">
                         Developing organic-compliant storage and processing solutions posed significant challenges due
@@ -1259,20 +1321,22 @@
                     </p>
 
                     <ul class="premium-list">
-                        
-                        <li>Chemical-free farm-level storage using airtight metal bins and masonry units (used by 10,000+ farmers)</li>
-                        <li>Development of CO₂ fumigation technology for large-scale organic storage—making Morarka Organic among the first three organizations globally to master this technology</li>
+
+                        <li>Chemical-free farm-level storage using airtight metal bins and masonry units (used by
+                            10,000+ farmers)</li>
+                        <li>Development of CO₂ fumigation technology for large-scale organic storage—making Morarka
+                            Organic among the first three organizations globally to master this technology</li>
                         <li>Innovation in solar-based dehydration and other crop-specific processing technologies</li>
                         <li>30+ processing technologies developed in last three years</li>
                     </ul>
 
-                 
-                </div>
+
+                </div> -->
             </div>
         </section>
 
         <!-- Technology & Systems -->
-        <section class="premium-section accent-bg">
+        <!-- <section class="premium-section accent-bg">
             <div class="tf-container w-1290">
                 <div class="section-header-premium">
                     <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
@@ -1332,10 +1396,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Marketing & Distribution -->
-        <section class="premium-section">
+        <!-- <section class="premium-section">
             <div class="tf-container w-1290">
                 <div class="section-header-premium">
                     <span class="section-badge-premium wow fadeInUp" data-wow-delay="0.1s">
@@ -1349,13 +1413,14 @@
                 <div class="premium-content-card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="content-icon-premium">
                         <i class="fas fa-truck"></i>
-                    </div>
+                    </div> -->
                     <!-- <h3 class="content-title-premium">Dual Market Strategy</h3> -->
-                    <div class="content-body-premium">
+                    <!-- <div class="content-body-premium">
                         <p>
                             Morarka Organic serves both bulk and retail markets. Bulk supplies are dispatched directly
                             from Jaipur, while retail operations are currently managed through Jaipur, Mumbai, and
-                            Delhi. These hubs supply Morarka Organic's own stores, modern retail chains, dealers, and
+                            Delhi. These hubs supply Morarka Organic Foods Limited's own stores, modern retail chains,
+                            dealers, and
                             home-delivery networks.
                         </p>
                         <p class="mt-4">
@@ -1365,7 +1430,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Premium CTA Section -->
         <!-- <section class="premium-cta-section">

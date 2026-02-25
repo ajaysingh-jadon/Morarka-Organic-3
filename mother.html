@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morarka · family portfolio</title>
+    <!-- Bootstrap 5 minimal grid -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ultra premium fonts: Playfair Display + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2eee9;  /* soft warm grey */
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: #2e3832;
+            line-height: 1.5;
+        }
+
+        /* premium colour combination — deep navy, warm wine, forest, and neutral accents */
+        :root {
+            --foundation-primary: rgb(25 135 84);    /* rich terracotta / wine */
+            --foundation-bg-light: #efe2d9;   
+            --organic-primary: #1d543b;        /* deep forest */
+            --organic-bg-light: #deeae3;
+            --dte-primary: #2c4059;            /* navy blue (down to earth) */
+            --dte-bg-light: #dee5ed;
+            --neutral-stone: #a28b76;
+            --gold-subtle: #c8a87c;
+            --border-light: #ddd2c6;
+            --card-shadow: 0 30px 50px -25px rgba(30, 35, 30, 0.25);
+        }
+
+        .mother-wrapper {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        /* main header — minimal, timeless */
+        .hub-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        .hub-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--foundation-primary), var(--organic-primary), var(--dte-primary), transparent);
+        }
+        .hub-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1rem;
+            filter: brightness(0.15) sepia(0.1);
+            opacity: 0.95;
+        }
+        .hub-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: #2e3b2e;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.2rem;
+        }
+        .hub-sub {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #7b6e5f;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* card grid */
+        .brand-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.8rem;
+            justify-content: center;
+            margin: 4rem 0 3rem;
+        }
+
+        /* base card — ultra premium */
+        .brand-card {
+            flex: 1 1 320px;
+            max-width: 380px;
+            background: white;
+            border-radius: 36px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+        .brand-card:hover {
+            transform: translateY(-14px);
+            box-shadow: 0 45px 75px -20px rgba(20, 30, 20, 0.35);
+        }
+
+        /* image container — now you can put any image (logo or hero) */
+        .card-image {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 1.8rem;
+        }
+        /* soft overlay for text readability */
+        .card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 1;
+        }
+
+        /* each brand gets a distinct image (you can replace with actual images) */
+        .img-foundation {
+            background-image: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=870&auto=format&fit=crop');  /* earthy / farmers */
+        }
+        .img-organic {
+            background-image: url('https://images.unsplash.com/photo-1542838132-92c53300407e?q=80&w=870&auto=format&fit=crop');  /* organic vegetables */
+        }
+        .img-dte {
+            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=870&auto=format&fit=crop');  /* forest / earth */
+        }
+
+        /* image label (logo / brand mark) — you can replace with actual logo image */
+        .image-logo {
+            position: relative;
+            z-index: 3;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(5px);
+            padding: 0.6rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2d2d2d;
+            border: 1px solid rgba(255, 215, 140, 0.4);
+            box-shadow: 0 10px 22px -8px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .image-logo i {
+            font-size: 1.3rem;
+        }
+        /* you can replace the <i> with an <img> tag if you want actual logo files */
+
+        /* card content */
+        .card-content {
+            padding: 2.2rem 2.2rem 2.2rem;
+            background: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* brand-specific heading colors */
+        .foundation-head {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--foundation-primary);
+            line-height: 1.1;
+            margin-bottom: 0.2rem;
+        }
+        .organic-head {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--organic-primary);
+            line-height: 1.1;
+            margin-bottom: 0.2rem;
+        }
+        .dte-head {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dte-primary);
+            line-height: 1.1;
+            margin-bottom: 0.2rem;
+        }
+
+        .estab {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #8a7a6a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .desc {
+            font-size: 0.95rem;
+            color: #4d524d;
+            margin-bottom: 1.8rem;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--border-light);
+            padding-top: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-link {
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: 0.2s;
+        }
+        .btn-link i {
+            transition: transform 0.2s;
+        }
+        .btn-link:hover i {
+            transform: translateX(6px);
+        }
+
+        .link-foundation { color: var(--foundation-primary); }
+        .link-organic { color: var(--organic-primary); }
+        .link-dte { color: var(--dte-primary); }
+
+        .btn-link:hover.link-foundation { color: #9e4f23; }
+        .btn-link:hover.link-organic { color: #145a38; }
+        .btn-link:hover.link-dte { color: #1b3b5c; }
+
+        .arrow-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f3ec;
+            color: #4c4c4c;
+            transition: 0.25s;
+            border: 1px solid var(--border-light);
+        }
+        .brand-card:hover .arrow-circle {
+            background: var(--gold-subtle);
+            color: white;
+            border-color: var(--gold-subtle);
+        }
+
+        /* footer */
+        .hub-footer {
+            text-align: center;
+            margin-top: 5rem;
+            color: #8b7f71;
+            border-top: 1px solid #dacec0;
+            padding-top: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        .dot-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .brand-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .dot-foundation { background: var(--foundation-primary); }
+        .dot-organic { background: var(--organic-primary); }
+        .dot-dte { background: var(--dte-primary); }
+
+        .placeholder-note {
+            background: rgba(255,255,255,0.6);
+            border: 1px dashed var(--gold-subtle);
+            border-radius: 60px;
+            padding: 0.6rem 2rem;
+            display: inline-block;
+            color: #726553;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="mother-wrapper">
+        <!-- header -->
+        <div class="hub-header">
+            <!-- <img src="images/logo/morarka_logo1.png" alt="Morarka" class="hub-logo" onerror="this.style.display='none'"> -->
+            <h1 class="hub-title">Morarka</h1>
+            <div class="hub-sub">foundation · organic · down to earth</div>
+        </div>
+
+        <!-- three cards with distinct hero images + logo-like labels (you can replace with actual logos) -->
+        <div class="brand-grid">
+            
+            <!-- 1. MORARKA FOUNDATION (wine / terracotta) -->
+            <div class="brand-card">
+                <div class="card-image img-foundation">
+                    <span class="image-logo"><i class="fas fa-tree" style="color: var(--foundation-primary);"></i> foundation</span>
+                </div>
+                <div class="card-content">
+                    <h2 class="foundation-head">Morarka<br>Foundation</h2>
+                    <div class="estab"><i class="far fa-calendar-alt me-1"></i> since 1993 · not-for-profit</div>
+                    <p class="desc">
+                        A not-for-profit voluntary organization set up by Mr. Kamal M. Morarka to create wealth for the nation through innovations in resource management and capacity building. From grassroots implementing agency to leading resource organisation offering solutions for sustainable agriculture worldwide.
+                    </p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link link-foundation" target="_blank">Explore foundation <i class="fas fa-arrow-right"></i></a>
+                        <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. MORARKA ORGANIC (deep forest) -->
+            <div class="brand-card">
+                <div class="card-image img-organic">
+                    <span class="image-logo"><i class="fas fa-seedling" style="color: var(--organic-primary);"></i> morarka organic</span>
+                </div>
+                <div class="card-content">
+                    <h2 class="organic-head">Morarka<br>Organic</h2>
+                    <div class="estab"><i class="far fa-calendar-alt me-1"></i> established 2005 · MOFL</div>
+                    <p class="desc">
+                        Established under the umbrella of Morarka Foundation, Morarka Organic Foods Limited (MOFL) promotes sustainable agriculture, strengthens organic integrity, and enhances farmer livelihoods. Certified organic through robust Internal Control Systems (ICS) and ethical sourcing.
+                    </p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link link-organic" target="_blank">Discover organic <i class="fas fa-arrow-right"></i></a>
+                        
+                        <a href="#" class="btn-link link-organic" target="_blank"><span class="arrow-circle"><i class="fas fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DOWN TO EARTH (navy / deep blue) -->
+            <div class="brand-card">
+                <div class="card-image img-dte">
+                    <span class="image-logo"><i class="fas fa-globe-asia" style="color: var(--dte-primary);"></i> down to earth</span>
+                </div>
+                <div class="card-content">
+                    <h2 class="dte-head">Down to<br>Earth</h2>
+                    <div class="estab"><i class="far fa-leaf me-1"></i> organic living brand</div>
+                    <p class="desc">
+                        Down to Earth is an organic food brand from the house of Morarka Organic — the outcome of more than 12 years of organic food research and development, in accordance with the most stringent organic certification. India's contribution to the global organic revolution.
+                    </p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link link-dte" target="_blank">Visit Down to Earth <i class="fas fa-arrow-right"></i></a>
+                        <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- note: each card has a hero image at the top – you can replace with your own images or logos -->
+        <!-- <div class="text-center placeholder-note">
+            <i class="fas fa-edit me-2" style="color: var(--gold-subtle);"></i> replace placeholder images & href · premium navy · wine · forest palette
+        </div> -->
+
+        <!-- footer -->
+        <div class="hub-footer">
+            <div class="dot-row">
+                <span class="brand-dot dot-foundation"></span>
+                <span class="brand-dot dot-organic"></span>
+                <span class="brand-dot dot-dte"></span>
+            </div>
+            <div>three pillars · one purpose</div>
+        </div>
+    </div>
+</body>
+</html>
