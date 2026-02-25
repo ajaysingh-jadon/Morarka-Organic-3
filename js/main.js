@@ -590,22 +590,24 @@
         },
     };
 
-    var footer = function () {
-    $(document).on("click", ".footer-title-mobile", function () {
-        const $parent = $(this).closest(".footer-col-block");
-        const $content = $(this).next();
+//     var footer = function () {
+//     $(document).on("click", ".footer-title-mobile", function () {
+//         const $parent = $(this).closest(".footer-col-block");
+//         const $content = $(this).next();
 
-        $parent.toggleClass("open");
+//         $parent.toggleClass("open");
 
-        if ($parent.hasClass("open")) {
-            $content.stop(true, true).slideDown(250);
-        } else {
-            $content.stop(true, true).slideUp(250);
-        }
-    });
+//         if ($parent.hasClass("open")) {
+//             $content.stop(true, true).slideDown(250);
+//         } else {
+//             $content.stop(true, true).slideUp(250);
+//         }
+//     });
+// };
+
+var footer = function () {
+    // Handled by footer-loader.js after async inject
 };
-
-
 
     var popupProduct = function () {
         $(window).on("scroll", function () {
