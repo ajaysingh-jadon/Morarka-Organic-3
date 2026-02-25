@@ -11,7 +11,7 @@ if ($(".slider-home-1").length > 0) {
         grabCursor: true,
 
         autoplay: {
-            delay: 4000,
+            delay: 12000,
             disableOnInteraction: false,
         },
         navigation: {
@@ -187,7 +187,7 @@ if (document.querySelector(".slider-box-event")) {
     var swiper = new Swiper(".slider-box-event", {
         slidesPerView: 3,
         loop: true,
-        spaceBetween: 28,
+        spaceBetween:30,
         speed: 800,
 
         autoplay: {
@@ -199,16 +199,19 @@ if (document.querySelector(".slider-box-event")) {
             0: {
                 slidesPerView: 1,
             },
-            991: {
-                slidesPerView: 2,
+            750: {
+        slidesPerView: 2,
+    },
+            1180: {
+                slidesPerView: 3,
             },
             1440: {
                 slidesPerView: 3,
             },
         },
+        
     });
 }
-
 
 if (document.querySelector(".slider-s-project")) {
     var projectSlider = new Swiper(".slider-s-project", {
