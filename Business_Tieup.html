@@ -44,6 +44,339 @@
      {
         background-image: url("images/page-title/index-2.jpg");
      }
+
+       
+.partner-premium-section {
+    background: #faf7f2;
+    padding: 80px 0; /* 5rem = 80px */
+    border-radius: 2px;
+}
+
+.partner-premium-section .container {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.partner-premium-section .section-title {
+    text-align: center;
+    margin-bottom: 48px; /* 3rem = 48px */
+}
+
+.partner-premium-section .section-title h2 {
+    font-size: 44.8px; /* 2.8rem = 44.8px */
+    font-weight: 600;
+    color: #2d4f2c;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px; /* 1rem = 16px */
+    /* font-family: 'Playfair Display', serif; */
+}
+
+/* Responsive heading */
+@media (max-width: 767px) {
+    .partner-premium-section .section-title h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .partner-premium-section .section-title h2 {
+        font-size: 28px;
+    }
+}
+
+.partner-premium-section .section-title h2 i {
+    color: #b68b40;
+    margin-right: 10px;
+}
+
+.partner-premium-section .section-title .grass-icon {
+    display: block;
+    margin: 8px auto 0; /* 0.5rem = 8px */
+    width: 120px;
+    opacity: 0.7;
+}
+
+.partner-premium-section .lead-text {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 56px auto; /* 3.5rem = 56px */
+    font-size: 19.2px; /* 1.2rem = 19.2px */
+    line-height: 1.8;
+    color: #3a3a3a;
+    background: rgba(255,255,255,0.7);
+    padding: 28.8px 40px; /* 1.8rem = 28.8px, 2.5rem = 40px */
+    border-radius: 60px 60px 60px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #e7ddd0;
+}
+
+/* Responsive lead text */
+@media (max-width: 767px) {
+    .partner-premium-section .lead-text {
+        font-size: 17px;
+        padding: 25px 30px;
+        margin-bottom: 45px;
+    }
+}
+
+@media (max-width: 575px) {
+    .partner-premium-section .lead-text {
+        font-size: 16px;
+        padding: 20px 20px;
+        margin-bottom: 35px;
+        border-radius: 40px 40px 40px 0;
+    }
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.partner-card {
+    background: white;
+    padding: 30px 24px 26px 24px; /* 2.5rem = 40px, 1.8rem = 28.8px, 2rem = 32px */
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 0 15px 30px -12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e3d9cb;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive card padding */
+@media (max-width: 767px) {
+    .partner-card {
+        padding: 30px 20px 25px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .partner-card {
+        padding: 25px 15px 20px 15px;
+    }
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -12px rgba(46, 77, 46, 0.25);
+    border-color: #c2b094;
+}
+
+.partner-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #95b58f, #d4b57e, #95b58f);
+}
+
+.card-icon {
+    font-size: 48px; /* 3rem = 48px */
+    color: #3f6a3d;
+    margin-bottom: 19.2px; /* 1.2rem = 19.2px */
+    background: #edf3e9;
+    width: 70px;
+    height: 70px;
+    border-radius: 30px 30px 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive icon */
+@media (max-width: 767px) {
+    .card-icon {
+        font-size: 42px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.partner-card h3 {
+    font-size: 28.8px; /* 1.8rem = 28.8px */
+    font-weight: 600;
+    color: #1e3a1d;
+    margin-bottom: 16px; /* 1rem = 16px */
+    border-left: 5px solid #b68b40;
+    padding-left: 15px;
+}
+
+/* Responsive heading */
+@media (max-width: 767px) {
+    .partner-card h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .partner-card h3 {
+        font-size: 20px;
+        padding-left: 12px;
+    }
+}
+
+.partner-card p {
+    color: #4f4f4f;
+    line-height: 1.7;
+    margin-bottom: 19.2px; /* 1.2rem = 19.2px */
+    font-size: 15.68px; /* 0.98rem = 15.68px */
+}
+
+@media (max-width: 767px) {
+    .partner-card p {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+}
+
+.partner-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 19.2px 0 0 0; /* 1.2rem = 19.2px */
+}
+
+.partner-card ul li {
+    margin-bottom: 9.6px; /* 0.6rem = 9.6px */
+    font-size: 15.36px; /* 0.96rem = 15.36px */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .partner-card ul li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+}
+
+.partner-card ul li i {
+    color: #b68b40;
+    font-size: 14.4px; /* 0.9rem = 14.4px */
+    width: 20px;
+    text-align: center;
+}
+
+.bulk-supply {
+    background: #eef5ea;
+}
+
+.why-morarka {
+    background: #2d4f2c;
+    color: white !important;
+    padding: 40px 28.8px; /* 2.5rem = 40px, 1.8rem = 28.8px */
+}
+
+@media (max-width: 767px) {
+    .why-morarka {
+        padding: 30px 20px;
+    }
+}
+
+.why-morarka h3 {
+    color: #faeac6;
+    border-left-color: #f5d78c;
+}
+
+.why-morarka p, .why-morarka li {
+    color: #f0f3e9;
+}
+
+.why-morarka i {
+    color: #fad16b;
+}
+
+.footer-tagline {
+    margin-top: 64px; /* 4rem = 64px */
+    text-align: center;
+    font-size: 28.8px; /* 1.8rem = 28.8px */
+    font-weight: 400;
+    color: #3d5e3b;
+    background: #ffffffb8;
+    padding: 24px 16px; /* 1.5rem = 24px, 1rem = 16px */
+    border-radius: 60px;
+    border: 1px dashed #b68b40;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(3px);
+}
+
+/* Responsive footer */
+@media (max-width: 991px) {
+    .footer-tagline {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-tagline {
+        font-size: 20px;
+        padding: 18px 12px;
+        margin-top: 40px;
+        border-radius: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-tagline {
+        font-size: 16px;
+        padding: 15px 10px;
+        margin-top: 30px;
+    }
+}
+
+.footer-tagline i {
+    color: #ab7b3a;
+    margin: 0 10px;
+}
+
+.grass-divider {
+    text-align: center;
+    margin: 30px 0 20px;
+    opacity: 0.5;
+}
+
+hr.grass-line {
+    border: 0;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #b1a586, #b1a586 10px, transparent 10px, transparent 20px);
+    width: 150px;
+    margin: 20px auto;
+}
+
+/* Additional responsive adjustments for grid */
+@media (max-width: 1199px) {
+    .partner-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .partner-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Fix for Why Morarka card on mobile */
+@media (max-width: 767px) {
+    .why-morarka ul li {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
     </style>
 
 </head>
@@ -116,7 +449,111 @@
         </div>
 
 
-        <section class="s-about pt-93 pb-88 bg-white">
+      
+        <section class="partner-premium-section">
+    <div class="container">
+        <!-- Section header with icon and grass motif (matching your page's style) -->
+        <div class="section-title">
+            <h2>
+                <i class="fas fa-handshake"></i> Partner with Morarka Organic
+            </h2>
+            <img src="images/item/line-throw-title.png" alt="decoration" class="grass-icon" style="max-width:140px;">
+        </div>
+
+        <!-- Lead paragraph (farm to fork promise) with premium background -->
+        <div class="lead-text">
+            <i class="fas fa-seedling" style="color:#5f8140; margin-right:10px;"></i>
+            At Morarka Organic Foods Limited, we deliver certified organic food backed by strong farmer networks, 
+            transparent sourcing, and uncompromising quality standards. From farm to fork, we ensure purity, 
+            traceability, and sustainability in every product.
+        </div>
+
+        <!-- premium grid cards -->
+        <div class="partner-grid">
+
+            <!-- B2B Solutions card -->
+            <div class="partner-card">
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <h3>B2B Solutions</h3>
+                <p>Reliable organic supply for:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Retail chains & supermarkets</li>
+                    <li><i class="fas fa-check-circle"></i> Distributors & exporters</li>
+                    <li><i class="fas fa-check-circle"></i> HoReCa & institutional buyers</li>
+                    <li><i class="fas fa-check-circle"></i> Food processors & manufacturers</li>
+                </ul>
+                <p style="margin-top:15px;">We offer certified organic grains, pulses, millets, spices, oilseeds, and value-added products with custom packaging and nationwide distribution support.</p>
+            </div>
+
+            <!-- B2C Offerings -->
+            <div class="partner-card">
+                <div class="card-icon"><i class="fas fa-shopping-basket"></i></div>
+                <h3>B2C Offerings</h3>
+                <p>Healthy, chemical-free pantry essentials for conscious consumers:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Everyday staples</li>
+                    <li><i class="fas fa-check-circle"></i> Millets & traditional grains</li>
+                    <li><i class="fas fa-check-circle"></i> Cold-pressed oils</li>
+                    <li><i class="fas fa-check-circle"></i> Spices & processed foods</li>
+                </ul>
+                <p style="margin-top:15px;">Pure, nutritious, and responsibly sourced.</p>
+            </div>
+
+            <!-- White Labelling -->
+            <div class="partner-card">
+                <div class="card-icon"><i class="fas fa-tag"></i></div>
+                <h3>White Labelling</h3>
+                <p>Build your own organic brand with our end-to-end support:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Certified product sourcing</li>
+                    <li><i class="fas fa-check-circle"></i> Custom packaging & branding</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible MOQs</li>
+                    <li><i class="fas fa-check-circle"></i> Regulatory compliance assistance</li>
+                </ul>
+                <p style="margin-top:15px;">Launch with confidence and credibility.</p>
+            </div>
+
+            <!-- Bulk Supply (slightly different background) -->
+            <div class="partner-card bulk-supply">
+                <div class="card-icon"><i class="fas fa-truck"></i></div>
+                <h3>Bulk Supply</h3>
+                <p>Consistent, high-volume organic raw materials for industrial and institutional needs with competitive pricing and assured quality.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Industrial food processing</li>
+                    <li><i class="fas fa-check-circle"></i> Large institutional buyers</li>
+                    <li><i class="fas fa-check-circle"></i> Steady volume commitment</li>
+                </ul>
+            </div>
+
+            <!-- Why Morarka? – special dark card, spans maybe or unique -->
+            <div class="partner-card why-morarka" style="grid-column: span 1;">
+                <div class="card-icon" style="background:#f8e7cf; color:#2d4f2c;"><i class="fas fa-leaf"></i></div>
+                <h3>Why Morarka Organic?</h3>
+                <ul style="margin-top:0.8rem;">
+                    <li><i class="fas fa-check-circle" style="color:#fad16b;"></i> <strong>✔ Strong farmer network</strong></li>
+                    <li><i class="fas fa-check-circle" style="color:#fad16b;"></i> <strong>✔ Certified organic standards</strong></li>
+                    <li><i class="fas fa-check-circle" style="color:#fad16b;"></i> <strong>✔ Transparent value chain</strong></li>
+                    <li><i class="fas fa-check-circle" style="color:#fad16b;"></i> <strong>✔ Sustainable & ethical practices</strong></li>
+                </ul>
+                <p style="color:#e4dbbc; margin-top:25px;"><i class="fas fa-quote-left"></i> Cultivating purity. Delivering trust. <i class="fas fa-quote-right"></i></p>
+            </div>
+        </div> <!-- end partner grid -->
+
+        <!-- grass divider -->
+        <div class="grass-divider">
+            <hr class="grass-line">
+            <img src="images/item/grass.png" alt="" style="max-width:80px; opacity:0.6;">
+        </div>
+
+        <!-- final tagline (exactly from your text) with icon -->
+        <!-- <div class="footer-tagline">
+            <i class="fas fa-asterisk"></i> Morarka Organic — Cultivating Purity. Delivering Trust. <i class="fas fa-asterisk"></i>
+        </div> -->
+
+    </div>
+</section>
+
+  <section class="s-about pt-93 pb-88 bg-white">
 
 
             <div class="w-1290 m-auto tf-container">
@@ -147,7 +584,7 @@
                     </div>
                     <div
                         class="col-lg-5 col-sm-11 m-auto  my-3 order-lg-1 order-sm-0 d-flex align-items-center b-tie-img">
-                        <img src="/images/office_image/warehouse-inspection2.jpeg" alt="">
+                        <img src="images/office_image/warehouse-inspection2.jpeg" alt="">
                     </div>
                 </div>
             </div>
