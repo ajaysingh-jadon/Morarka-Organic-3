@@ -138,91 +138,6 @@
             max-height: 100%;
             object-fit: contain;
         }
-
-        .whatsapp-float {
-    position: fixed;
-    left: 20px;  
-    gap: 10px;
-    padding: 5px 10px;
-    border-radius: 12px;
-    bottom: 30px; 
-    background-color: #25d366;
-    color: white;  
-    width: max-content;
-    text-align: center;
-    font-size: 16px;
-    z-index: 800;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    background-color: #128C7E;
-    transform: scale(1.1);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.whatsapp-icon {
-    font-size: 35px;
- 
-}
-
-/* Optional: Add a pulsing animation */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
-
-.whatsapp-float {
-    animation: pulse 2s infinite;
-}
-
-/* Responsive for mobile */
-@media screen and (max-width: 768px) {
-    .whatsapp-float {
-     
-        left: 15px;
-        bottom: 20px;
-    }
-    
-    .whatsapp-icon {
-        font-size: 30px;
-    }
-}
-
-/* Optional: Add a tooltip on hover */
-.whatsapp-float::after {
-    content: "Chat with us";
-    position: absolute;
-    left: 70px;
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.whatsapp-float:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
     </style>
 </head>
 
@@ -467,7 +382,7 @@
                 <div class="tf-container w-1290 py-5  col-lg-11">
                     <h2 class="text-center  ">Everyday Food, Made Good.</h2>
                     <p class="text-center  font-worksans ">We believe clean, healthy, truly organic food should be a
-                        daily essentials. At Morarka Organic Foods Limited, we work to restore soil health,
+                        daily essential. At Morarka Organic Foods Limited, we work to restore soil health,
                         support farmers, and deliver pure, certified organic products that make healthy living
                         accessible to every household.</p>
                 </div>
@@ -581,7 +496,7 @@
                                                         <div class="icon style-circle hover-icon">
                                                             <i class="fa-solid fa-people-group"></i>
                                                         </div>
-                                                        <a href="about_us.html"
+                                                        <a href="javascript:void(0)"
                                                             class="caption fw-6 font-worksans text-upper hover-text-secondary">
                                                             Trusted Farming <br>
                                                             Communities
@@ -595,7 +510,7 @@
                                                         <div class="icon style-circle hover-icon">
                                                             <i class="fa-solid fa-leaf"></i>
                                                         </div>
-                                                        <a href="about_us.html"
+                                                        <a href="javascript:void(0)"
                                                             class="caption fw-6 font-worksans text-upper hover-text-secondary">
                                                             Certified Organic <br>
                                                             Sourcing
@@ -609,7 +524,20 @@
                                                         <div class="icon style-circle hover-icon">
                                                             <i class="fa-solid fa-seedling"></i>
                                                         </div>
-                                                        <a href="about_us.html"
+                                                        <a href="javascript:void(0)"
+                                                            class="caption fw-6 font-worksans text-upper hover-text-secondary">
+                                                            Sustainable Farm <br>
+                                                            Practices
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="box-icon style-3 ic-hover wow fadeInUp"
+                                                        data-wow-delay="0.2s">
+                                                        <div class="icon style-circle hover-icon">
+                                                            <i class="fa-solid fa-seedling"></i>
+                                                        </div>
+                                                        <a href="javascript:void(0)"
                                                             class="caption fw-6 font-worksans text-upper hover-text-secondary">
                                                             Sustainable Farm <br>
                                                             Practices
@@ -618,9 +546,9 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="about_us.html" class="tf-btn-read text-white hover-text-secondary">
+                                            <!-- <a href="about_us.html" class="tf-btn-read text-white hover-text-secondary">
                                                 Read More
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -1022,6 +950,12 @@
                             </div>
 
                             <div class="swiper-slide">
+                                <div class="certification-logo-premium wow fadeInUp" data-wow-delay="0.3s">
+                                    <img src="images/certification/onecert.png" alt="EU Organic Certification">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
                                 <div class="certification-logo-premium wow fadeInUp" data-wow-delay="0.2s">
                                     <img src="images/certification/javikbharat.png" alt="India Organic Certification">
                                 </div>
@@ -1194,9 +1128,7 @@
             <!-- /.Section blog post -->
         </div><!-- /.Main-content -->
 
- <a href="https://wa.me/9828613201" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp whatsapp-icon"></i><span>Order from whatsapp</span>
-    </a>
+
 
 
         <div id="site-footer"></div>
@@ -1205,7 +1137,9 @@
 
 
     </div>
-    
+     <a href="https://wa.me/9828613201" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i><span>Order from whatsapp</span>
+    </a>
     <!-- /#Wapper -->
 
     <!-- Open-search -->
@@ -1270,7 +1204,4 @@
 
 </body>
 
-
 </html>
-
-
