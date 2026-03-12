@@ -442,27 +442,6 @@
                     }, 300 + (index * 300));
                 });
             }
-
-            // Load header and footer
-            function loadComponent(url, elementId) {
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`Failed to load ${url}`);
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById(elementId).innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('Error loading component:', error);
-                        document.getElementById(elementId).innerHTML =
-                            '<div class="text-center py-5"><p>Component failed to load. Please check the file path.</p></div>';
-                    });
-            }
-
-            // Load components
-            loadComponent('header.html', 'site-header');
-            loadComponent('footer.html', 'site-footer');
         });
     </script>
 
