@@ -37,739 +37,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/logo/morarka_logo.jpg">
 
     <style>
-        .quality-page p {
-            margin-bottom: 15px;
-        }
-
-        .quality-assurance-page {
-            background: var(--White);
-            overflow-x: hidden;
-        }
-
-
-        .quality-section {
-           
-            position: relative;
-        }
-
-        .quality-section.light-bg {
-            background: #f8f9fa;
-        }
-
-
-        .quality-card-premium {
-            background: var(--White);
-            border-radius: 24px;
-            padding: 80px 70px;
-            margin: 0 auto 100px;
-
-            border: 1px solid var(--Border-4);
-            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* .quality-card-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 6px;
-            height: 100%;
-            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
-        } */
-
-        .quality-header-premium {
-
-            margin-bottom: 20px;
-        }
-
-        .quality-badge-premium {
-            display: inline-block;
-            background: var(--Secondary);
-            color: var(--Primary);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .quality-title-premium {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--Text-2);
-            margin-bottom: 25px;
-            position: relative;
-            display: inline-block;
-        }
-
-
-
-        .quality-text-premium {
-            font-size: 19px;
-            line-height: 1.8;
-            color: var(--Text);
-        }
-
-        .highlight-quality {
-            color: var(--Primary);
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        /* NEW premium bullet list */
-        .premium-bullet-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .premium-bullet-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-            color: var(--Text);
-            border-bottom: 1px dashed rgba(13, 64, 28, 0.1);
-            padding-bottom: 18px;
-        }
-
-        .premium-bullet-list li:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .bullet-icon {
-            flex-shrink: 0;
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, var(--Primary), #2b8250);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            box-shadow: 0 10px 18px rgba(13, 64, 28, 0.2);
-            margin-top: 4px;
-        }
-
-        .bullet-icon i {
-            font-size: 14px;
-        }
-
-        /* Quality Pillars */
-        .quality-pillars-section {
-            padding: 80px 0;
-            background: var(--White);
-        }
-
-        .pillars-grid-premium {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .pillar-card-premium {
-            background: var(--White);
-            border-radius: 20px;
-            padding: 50px 40px;
-            border: 1px solid var(--Border-4);
-            box-shadow: 0 20px 40px rgba(13, 64, 28, 0.06);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .pillar-card-premium:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(13, 64, 28, 0.1);
-            border-color: var(--Secondary);
-        }
-
-        .pillar-card-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
-        }
-
-        .pillar-icon-premium {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--Primary), var(--Bg-11));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            transition: all 0.3s ease;
-        }
-
-        .pillar-card-premium:hover .pillar-icon-premium {
-            background: linear-gradient(135deg, var(--Secondary), #e6b412);
-            transform: rotate(15deg);
-        }
-
-        .pillar-icon-premium i {
-            font-size: 32px;
-            color: var(--White);
-        }
-
-        .pillar-title-premium {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--Text-2);
-            margin-bottom: 20px;
-        }
-
-        .pillar-desc-premium {
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--Text);
-        }
-
-        /* ICS Process Timeline */
-        .ics-process-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .process-timeline-premium {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-top: 50px;
-        }
-
-        .process-timeline-premium::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, var(--Primary), var(--Secondary));
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-
-        .process-step-premium {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .process-step-premium:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .process-step-premium:nth-child(odd) .step-content-premium {
-            margin-right: 50px;
-            margin-left: 0;
-            text-align: right;
-        }
-
-        .step-content-premium {
-            width: 45%;
-            background: var(--White);
-            border-radius: 16px;
-            padding: 40px 35px;
-            border: 1px solid var(--Border-4);
-            box-shadow: 0 15px 30px rgba(13, 64, 28, 0.06);
-            transition: all 0.3s ease;
-        }
-
-        .step-content-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(13, 64, 28, 0.1);
-            border-color: var(--Secondary);
-        }
-
-        .step-number-premium {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--Primary);
-            color: var(--White);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: 700;
-            z-index: 3;
-            box-shadow: 0 10px 20px rgba(13, 64, 28, 0.2);
-        }
-
-        .process-step-premium:nth-child(odd) .step-number-premium {
-            left: auto;
-            right: -25px;
-            transform: none;
-        }
-
-        .process-step-premium:nth-child(even) .step-number-premium {
-            left: -25px;
-            right: auto;
-            transform: none;
-        }
-
-        .step-title-premium {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--Text-2);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(13, 64, 28, 0.1);
-        }
-
-        .step-desc-premium {
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--Text);
-        }
-
-        /* Certification Section */
-        .certification-section-premium {
-            padding: 100px 0;
-            background: var(--cream);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .certification-section-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/patterns/leaf-pattern-white.png') center/contain;
-            opacity: 0.1;
-        }
-
-        .certification-header-premium {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .certification-title-premium {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-
-        }
-
-        .certification-tagline-premium {
-            font-size: 20px;
-            color: var(--body-text);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .certificationSwiper {
-            padding: 20px 0 40px;
-            position: relative;
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        .certification-logos-premium {
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-            /* gap: 50px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-            position: relative;
-            z-index: 2; */
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .certification-logo-premium {
-            width: 180px;
-            height: 180px;
-
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-
-            margin: 0 auto;
-        }
-
-
-        .certification-logo-premium img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* Quality Stats */
-        .quality-stats-section {
-            padding: 80px 0;
-            background: var(--White);
-        }
-
-        .stats-grid-premium {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .stat-card-premium {
-            background: var(--White);
-            border-radius: 20px;
-            padding: 50px 30px;
-            text-align: center;
-            border: 1px solid var(--Border-4);
-            box-shadow: 0 20px 40px rgba(13, 64, 28, 0.06);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px rgba(13, 64, 28, 0.1);
-            border-color: var(--Secondary);
-        }
-
-        .stat-number-premium {
-            font-size: 56px;
-            font-weight: 700;
-            color: var(--Primary);
-            display: block;
-            margin-bottom: 15px;
-            line-height: 1;
-        }
-
-        .stat-text-premium {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--Text-2);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .quality-card-premium {
-                padding: 70px 60px;
-                margin: 0 20px 80px;
-            }
-
-            .certification-logo-premium {
-                width: 160px;
-                height: 160px;
-            }
-        }
-
-        @media (max-width: 992px) {
-
-            .quality-title-premium,
-            .certification-title-premium {
-                font-size: 36px;
-            }
-
-            .quality-card-premium {
-                padding: 60px 50px;
-            }
-
-            .process-timeline-premium::before {
-                left: 30px;
-            }
-
-            .process-step-premium,
-            .process-step-premium:nth-child(odd) {
-                flex-direction: column;
-                margin-left: 60px;
-            }
-
-            .step-content-premium {
-                width: 100%;
-                margin: 0 0 30px 0;
-                text-align: left !important;
-            }
-
-            .step-number-premium {
-                left: -80px !important;
-                right: auto !important;
-                transform: none !important;
-            }
-
-            .certificationSwiper {
-                padding: 10px 0 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .quality-section {
-                padding: 70px 0;
-            }
-
-            .quality-title-premium,
-            .certification-title-premium {
-                font-size: 32px;
-            }
-
-            .quality-card-premium {
-                padding: 50px 40px;
-            }
-
-            .pillars-grid-premium {
-                grid-template-columns: 1fr;
-            }
-
-            .certification-logo-premium {
-                width: 140px;
-                height: 140px;
-                padding: 20px;
-            }
-
-            .stats-grid-premium {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-
-            .quality-title-premium,
-            .certification-title-premium {
-                font-size: 28px;
-            }
-
-            .quality-card-premium {
-                padding: 40px 30px;
-            }
-
-            /* .certification-logos-premium {
-                grid-template-columns: repeat(2, 1fr);
-                display: grid;
-            } */
-
-            .certification-logo-premium {
-                width: 140px;
-                height: 140px;
-                margin: 0 auto;
-            }
-
-            .certification-tagline-premium {
-                font-size: 18px;
-                padding: 0 20px;
-            }
-
-            .stats-grid-premium {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-number-premium {
-                font-size: 48px;
-            }
-
-            .certificationSwiper {
-                padding: 5px 0 20px;
-            }
-        }
-
-        .section-header-premium {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section-badge-premium {
-            display: inline-block;
-            color: var(--Secondary);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section-badge-premium::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: var(--Secondary);
-        }
-
-        .quality-process-premium {
-            padding: 50px 0;
-            background: linear-gradient(180deg, #f8faf7 0%, var(--White) 100%);
-            position: relative;
-        }
-
-        .process-header-premium {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .process-title-premium {
-            font-size: 42px;
-            font-weight: 800;
-            color: var(--Text-2);
-            margin-bottom: 25px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .process-title-premium::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
-        }
-
-        .process-subtitle-premium {
-            font-size: 19px;
-            color: var(--Text);
-            max-width: 700px;
-            margin: 40px auto 0;
-            line-height: 1.7;
-            opacity: 0.9;
-        }
-
-        .process-steps-premium {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 35px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .process-step-card {
-            background: var(--White);
-            border-radius: 24px;
-            padding: 50px 40px;
-            border: 1px solid var(--Border-4);
-            box-shadow: 0 25px 60px rgba(13, 64, 28, 0.07);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .process-step-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, var(--Primary), var(--Secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .process-step-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 35px 80px rgba(13, 64, 28, 0.12);
-        }
-
-        .process-step-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .step-icon-premium {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg, var(--Primary), var(--Bg-11));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            box-shadow: 0 20px 40px rgba(13, 64, 28, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .step-icon-premium::before {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: rotate(45deg);
-            animation: shine 3s infinite linear;
-        }
-
-        .step-icon-premium i {
-            font-size: 36px;
-            color: var(--White);
-            position: relative;
-            z-index: 2;
-        }
-
-        .step-number-premium {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--Secondary);
-            color: var(--Primary);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 800;
-            box-shadow: 0 8px 20px rgba(248, 195, 44, 0.3);
-        }
-
-        .step-title-premium {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--Text-2);
-            margin-bottom: 20px;
-            font-family: 'Farmhouse', sans-serif;
-        }
-
-        .step-desc-premium {
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--Text);
-        }
+        
         .page-title
         {
             background-image: url("images/farms/farmer-working6.jpg");
@@ -777,7 +45,7 @@
     </style>
 </head>
 
-<body class="quality-assurance-page">
+<body class="qa-page">
     <!-- Wrapper -->
     <div id="wrapper">
 
@@ -831,63 +99,63 @@
         </div>
 
         <!-- Main Content -->
-        <div class="main-content quality-page">
+        <div class="main-content qa-content">
 
             <!-- Quality & Assurance Section - REPLACED WITH NEW BULLET CONTENT -->
-            <section class="quality-section tf-container w-1290">
-                <div class="section-header-premium wow fadeInUp">
-                    <span class="section-badge-premium">quality is not an outcome—it is a discipline</span>
-                    <h2 class="section-title-premium">Quality & Assurance</h2>
-                    <p class="section-subtitle-premium">
+            <section class="qa-section tf-container w-1290">
+                <div class="qa-section-header wow fadeInUp">
+                    <span class="qa-section-badge">quality is not an outcome—it is a discipline</span>
+                    
+                    <p class="qa-section-subtitle">
                         we ensure that each product bearing the Morarka Organic name meets uncompromising standards of
                         purity, safety, and nutritional excellence
                     </p>
                 </div>
-                <div class="quality-card-premium wow fadeInUp">
+                <div class="qa-card wow fadeInUp">
                    
 
-                    <div class="quality-text-premium">
+                    <div class="qa-text">
                         <!-- NEW PREMIUM BULLET LIST  -->
-                        <ul class="premium-bullet-list">
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> At Morarka Organic Food
+                        <ul class="qa-list">
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> At Morarka Organic Food
                                 Limited, quality is treated as a disciplined process, integrated across every stage of
                                 the organic value chain rather than as a final outcome.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our approach is anchored
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Our approach is anchored
                                 in the principles of integrity, transparency, and ecological responsibility, ensuring
                                 uncompromising standards of purity, safety, and nutritional excellence.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Quality assurance begins
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Quality assurance begins
                                 at the farm level through a robust Internal Control System (ICS) developed by the
-                                Morarka Foundation.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> The ICS governs all
+                                M.R. Morarka-GDC Rural Research Foundation.</li>
+                            <!-- <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> The ICS governs all
                                 aspects of organic production, including seed selection, cultivation practices, field
                                 monitoring, documentation, inspections, and certification.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Dedicated field teams
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Dedicated field teams
                                 conduct regular audits and residue testing, ensuring complete traceability from soil to
                                 shelf across grains, pulses, and spices.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Each farm is viewed as a
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Each farm is viewed as a
                                 living ecological system where soil health, biodiversity, water stewardship, and natural
                                 pest cycles are nurtured rather than disrupted.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> By promoting regenerative
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> By promoting regenerative
                                 agriculture and eliminating synthetic chemicals, we safeguard long-term land health and
                                 community well-being.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our quality philosophy
-                                goes beyond regulatory compliance through close collaboration with farmer groups.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> We support the adoption of
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Our quality philosophy
+                                goes beyond regulatory compliance through close collaboration with farmer groups.</li> -->
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> We support the adoption of
                                 sustainable farming techniques, improved post-harvest handling, and hygienic processing
                                 aligned with international standards.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Every product passes
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Every product passes
                                 through a carefully controlled supply chain and is scientifically tested, ethically
                                 sourced, and responsibly handled.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Our vision extends beyond
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Our vision extends beyond
                                 production to fostering a culture where organic food is accessible, trusted, and valued.
                             </li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> Through partnerships,
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> Through partnerships,
                                 policy advocacy, and informed consumer engagement, we contribute toward safer food
                                 systems and sustainable living.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> We invite you to
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> We invite you to
                                 experience the promise behind our products—rooted in rigorous systems, responsible
                                 sourcing, and deep respect for nature.</li>
-                            <li><span class="bullet-icon"><i class="fas fa-check"></i></span> With Morarka Organic,
+                            <li><span class="qa-list-icon"><i class="fas fa-check"></i></span> With Morarka Organic,
                                 every meal supports personal well-being and a healthier planet.</li>
                         </ul>
                     </div>
@@ -897,74 +165,55 @@
 
             <!-- ICS Process Section -->
             <section class="quality-process-premium">
-                <div class="process-header-premium wow fadeInUp">
-                    <h2 class="process-title-premium">Internal Control System </h2>
-                    <p class="process-subtitle-premium">
+                <div class="qa-process-header wow fadeInUp">
+                    <h2 class="qa-process-title">Internal Control System </h2>
+                    <p class="qa-process-subtitle">
                         A systematic approach ensuring every product meets our uncompromising standards
                     </p>
                 </div>
 
-                <div class="process-steps-premium">
-                    <div class="process-step-card wow fadeInUp">
-                        <div class="step-number-premium">1</div>
-                        <div class="step-icon-premium">
+                <div class="qa-steps">
+                    <div class="qa-step wow fadeInUp">
+                        <div class="qa-step-number">1</div>
+                        <div class="qa-step-icon">
                             <i class="fas fa-seedling"></i>
                         </div>
-                        <h3 class="step-title-premium">Seed Selection</h3>
-                        <p class="step-desc-premium">Certified organic seeds and natural planting materials selected for
+                        <h3 class="qa-step-title">Seed Selection</h3>
+                        <p class="qa-step-desc">Certified organic seeds and natural planting materials selected for
                             purity and quality</p>
                     </div>
 
-                    <div class="process-step-card wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="step-number-premium">2</div>
-                        <div class="step-icon-premium">
+                    <div class="qa-step wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="qa-step-number">2</div>
+                        <div class="qa-step-icon">
                             <i class="fas fa-leaf"></i>
                         </div>
-                        <h3 class="step-title-premium">Cultivation Practices</h3>
-                        <p class="step-desc-premium">Natural farming methods without synthetic chemicals or pesticides
+                        <h3 class="qa-step-title">Cultivation Practices</h3>
+                        <p class="qa-step-desc">Natural farming methods without synthetic chemicals or pesticides
                         </p>
                     </div>
 
-                    <div class="process-step-card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="step-number-premium">3</div>
-                        <div class="step-icon-premium">
+                    <div class="qa-step wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="qa-step-number">3</div>
+                        <div class="qa-step-icon">
                             <i class="fas fa-flask"></i>
                         </div>
-                        <h3 class="step-title-premium">Field Monitoring</h3>
-                        <p class="step-desc-premium">Comprehensive scientific analysis for purity and safety</p>
+                        <h3 class="qa-step-title">Field Monitoring</h3>
+                        <p class="qa-step-desc">Comprehensive scientific analysis for purity and safety</p>
                     </div>
 
-                    <div class="process-step-card wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="step-number-premium">4</div>
-                        <div class="step-icon-premium">
+                    <div class="qa-step wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="qa-step-number">4</div>
+                        <div class="qa-step-icon">
                             <i class="fas fa-certificate"></i>
                         </div>
-                        <h3 class="step-title-premium">Certification</h3>
-                        <p class="step-desc-premium">Third-party verification by international organic certifying bodies
+                        <h3 class="qa-step-title">Certification</h3>
+                        <p class="qa-step-desc">Third-party verification by international organic certifying bodies
                         </p>
                     </div>
                 </div>
             </section>
-            <section class="quality-stats-section">
-                <div class="stats-grid-premium">
-                    <div class="stat-card-premium wow fadeInUp">
-                        <span class="stat-number-premium">100%</span>
-                        <span class="stat-text-premium">Organic Certified</span>
-                    </div>
-                    <div class="stat-card-premium wow fadeInUp" data-wow-delay="0.1s">
-                        <span class="stat-number-premium">0</span>
-                        <span class="stat-text-premium">Chemical Residues</span>
-                    </div>
-                    <div class="stat-card-premium wow fadeInUp" data-wow-delay="0.2s">
-                        <span class="stat-number-premium">170+</span>
-                        <span class="stat-text-premium">Quality Tests</span>
-                    </div>
-                    <div class="stat-card-premium wow fadeInUp" data-wow-delay="0.3s">
-                        <span class="stat-number-premium">24/7</span>
-                        <span class="stat-text-premium">Quality Monitoring</span>
-                    </div>
-                </div>
-            </section>
+            
 
             <!-- Certification Section -->
             <!-- Certification Section -->
