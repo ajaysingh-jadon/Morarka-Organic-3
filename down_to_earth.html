@@ -5,9 +5,13 @@
     <meta charset="utf-8">
     <title>Down to Earth | Morarka Organic</title>
 
-    <meta name="description" content="Explore Down to Earth by Morarka Organic – a premium range of certified organic food products including grains, spices, oils, and healthy groceries in India.">
-   <meta name="keywords" content="Down to Earth organic products, organic food brand India, organic groceries India, certified organic food India, Morarka Organic products">
-    <meta name="author" content="Morarka Organic">
+    <meta name="description"
+        content="Explore Down to Earth by Morarka Organic – a premium range of certified organic food products including grains, spices, oils, and healthy groceries in India.">
+
+    <meta name="keywords"
+        content="Down to Earth organic products, organic food brand India, organic groceries India, certified organic food India, Morarka Organic products">
+
+    <meta name="author" content="Morarka Organic Foods Limited">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -35,75 +39,14 @@
         /* ===== DOWN TO EARTH - PREMIUM REDESIGN WITH YOUR COLORS ===== */
 
         /* Using your color palette */
-        :root {
-            --Black: #000000;
-            --White: #ffffff;
-            --body-text: #6e7673;
-            --Primary: #0d401c;
-            --Secondary: #f8c32c;
-            --Third: #8a9b8e;
-            --Text: #6e7673;
-            --Text-2: #072010;
-            --Text-3: #eeeeee;
-            --Text-4: #278d45;
-            --Text-5: #222222;
-            --Text-6: #ededed;
-            --Text-7: #093416;
-            --Bg: #235130;
-            --Bg-1: rgb(13, 64, 28, 0.1);
-            --Bg-2: rgb(4, 18, 8, 0.4);
-            --Bg-3: rgb(13, 64, 28, 0.05);
-            --Bg-4: #6c512f;
-            --Bg-5: #3d6649;
-            --Bg-6: #52320a;
-            --Bg-7: rgb(13, 64, 28, 0.12);
-            --Bg-8: #f3f0eb;
-            --Bg-9: rgb(13, 64, 28, 0.13);
-            --Bg-10: rgb(13, 64, 28, 0.05);
-            --Bg-11: #1c6932;
-            --Bg-12: rgba(255, 255, 255, 0.07);
-            --Bg-13: rgb(13, 64, 28, 0.7);
-            --Bg-14: rgb(4, 18, 8, 0.3);
-            --Bg-15: rgb(255, 255, 255, 0.25);
-            --Bg-16: #e9e0ce;
-            --Bg-17: rgb(13, 64, 28, 0.07);
-            --Border: rgb(13, 64, 28, 0.15);
-            --Border-2: #6a5030;
-            --Border-3: rgb(255, 255, 255, 0.2);
-            --Border-4: #dbe3dd;
-            --Border-5: rgba(255, 255, 255, 0.15);
-            --Border-6: #e9e4df;
-            --Border-7: rgba(255, 255, 255, 0.5);
-            --Border-8: rgb(243, 240, 235, 0.25);
-            --Border-9: rgb(4, 18, 8, 0.25);
-            --Border-10: rgba(255, 255, 255, 0.3);
-            --Border-11: #d1d6cc;
-            --Border-12: rgb(13, 64, 28, 0.2);
-            --Border-13: rgb(82, 50, 10, 0.23);
-            --Border-14: #3b6345;
-            --Border-15: rgb(13, 64, 28, 0.5);
-            --Color-1: #d11b1b;
-            --Color-2: #acd373;
-            --Color-3: #f26522;
-            --Color-4: #8560a8;
-            --Color-5: #95bfa1;
-            --Color-6: rgb(255, 255, 255, 0.4);
-            --Color-7: #156b2f;
-            --Color-8: #1cbbb4;
-            --Color-9: #bd8cbf;
-            --Color-10: #f26c4f;
-            --Color-11: #ed1c24;
-            --Color-12: #00aeef;
-            --Color-13: #39b54a;
-        }
-
+        
         /* Premium Background Effects */
-        .premium-section {
+        .dte-section {
             position: relative;
             overflow: hidden;
         }
 
-        .premium-section::before {
+        .dte-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -113,12 +56,12 @@
             background: linear-gradient(90deg, transparent, var(--Secondary), transparent);
         }
 
-        .philosophy-bg {
+        .dte-section--philosophy {
             background: linear-gradient(135deg, var(--Bg-16) 0%, var(--White) 100%);
             position: relative;
         }
 
-        .philosophy-bg::after {
+        .dte-section--philosophy::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -131,11 +74,11 @@
             z-index: 0;
         }
 
-        .retail-bg {
+        .dte-section--retail {
             background: linear-gradient(135deg, var(--Bg-8) 0%, var(--White) 100%);
         }
 
-        .revolution-bg {
+        .dte-section-revolution {
             background: linear-gradient(135deg, var(--Bg-3) 0%, var(--White) 100%);
         }
 
@@ -144,7 +87,7 @@
         }
 
         /* Premium Typography */
-        .premium-heading {
+        .dte-title {
             color: var(--Text-7);
             font-weight: 700;
             line-height: 1.2;
@@ -153,7 +96,7 @@
             display: inline-block;
         }
 
-        .premium-heading::after {
+        .dte-title::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -164,7 +107,7 @@
             border-radius: 2px;
         }
 
-        .philosophy-quote {
+        .dte-quote {
             font-size: 34px;
             font-weight: 600;
             line-height: 1.3;
@@ -175,7 +118,7 @@
             font-style: italic;
         }
 
-        .philosophy-quote::before {
+        .dte-quote::before {
             content: '"';
             position: absolute;
             left: 0;
@@ -186,7 +129,7 @@
             font-family: serif;
         }
 
-        .premium-text {
+        .dte-text {
             color: var(--Text-5);
             line-height: 1.8;
             margin-bottom: 25px;
@@ -194,13 +137,13 @@
             position: relative;
         }
 
-        .accent-text {
+        .dte-highlight {
             color: var(--Text-4);
             font-weight: 600;
         }
 
         /* Premium Card Design */
-        .premium-card {
+        .dte-card {
             background: var(--White);
             border-radius: 24px;
             padding: 50px;
@@ -211,13 +154,13 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .premium-card:hover {
+        .dte-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 35px 70px rgba(13, 64, 28, 0.12);
             border-color: var(--Secondary);
         }
 
-        .premium-card::before {
+        .dte-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -227,7 +170,7 @@
             background: linear-gradient(90deg, var(--Secondary), var(--Text-4), var(--Primary));
         }
 
-        .premium-card::after {
+        .dte-card::after {
             content: '';
             position: absolute;
             top: 20px;
@@ -275,14 +218,14 @@
         }
 
         /* Feature Items */
-        .feature-grid {
+        .dte-feature {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
 
         }
 
-        .feature-item {
+        .dte-feature-item {
             background: var(--White);
             padding: 40px 30px;
             border-radius: 20px;
@@ -293,13 +236,13 @@
             overflow: hidden;
         }
 
-        .feature-item:hover {
+        .dte-feature-item:hover {
             transform: translateY(-8px);
             border-color: var(--Secondary);
             box-shadow: 0 20px 40px rgba(13, 64, 28, 0.1);
         }
 
-        .feature-icon {
+        .dte-feature--icon {
             width: 100px;
             height: 100px;
             background: linear-gradient(135deg, var(--Bg-1), var(--White));
@@ -312,7 +255,7 @@
             position: relative;
         }
 
-        .feature-icon::before {
+        .dte-feature--icon::before {
             content: '';
             position: absolute;
             top: 5px;
@@ -323,14 +266,14 @@
             border-radius: 50%;
         }
 
-        .feature-icon i {
+        .dte-feature--icon i {
             font-size: 40px;
             color: var(--Primary);
             position: relative;
             z-index: 1;
         }
 
-        .feature-title {
+        .dte-feature--title {
             font-size: 22px;
             color: var(--Text-7);
             margin-bottom: 15px;
@@ -338,14 +281,14 @@
         }
 
         /* Products Showcase */
-        .product-grid {
+        .dte-product {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin: 60px 0;
         }
 
-        .product-card {
+        .dte-product__item {
             background: var(--White);
             padding: 40px 30px;
             border-radius: 20px;
@@ -356,12 +299,12 @@
             overflow: hidden;
         }
 
-        .product-card:hover {
+        .dte-product__item:hover {
             transform: translateY(-12px);
             box-shadow: 0 30px 60px rgba(13, 64, 28, 0.12);
         }
 
-        .product-card::before {
+        .dte-product__item::before {
             content: '';
             position: absolute;
             top: 0;
@@ -371,7 +314,7 @@
             background: linear-gradient(90deg, var(--Secondary), var(--Color-13));
         }
 
-        .product-icon {
+        .dte-product__icon {
             width: 80px;
             height: 80px;
             background: var(--Bg-1);
@@ -383,12 +326,12 @@
             border: 2px solid var(--Secondary);
         }
 
-        .product-icon i {
+        .dte-product__icon i {
             font-size: 36px;
             color: var(--Primary);
         }
 
-        .product-title {
+        .dte-product--title {
             font-size: 20px;
             color: var(--Text-7);
             margin-bottom: 10px;
@@ -443,50 +386,21 @@
         /* Stats Section */
 
 
-        .stat-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: var(--White);
-            border-radius: 20px;
-            border: 1px solid var(--Border-6);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            border-color: var(--Secondary);
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-size: 56px;
-            font-weight: 700;
-            color: var(--Primary);
-            display: block;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: var(--Text);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
 
         /* Responsive Design */
         @media (max-width: 1200px) {
-            .philosophy-quote {
+            .dte-quote {
                 font-size: 24px;
                 padding-left: 50px;
             }
 
-            .premium-card {
+            .dte-card {
                 padding: 40px;
             }
         }
 
         @media (max-width: 992px) {
-            .philosophy-quote {
+            .dte-quote {
                 font-size: 26px;
                 padding-left: 40px;
             }
@@ -506,17 +420,17 @@
         }
 
         @media (max-width: 768px) {
-            .philosophy-quote {
+            .dte-quote {
                 font-size: 25px;
                 padding-left: 35px;
             }
 
-            .philosophy-quote::before {
+            .dte-quote::before {
                 font-size: 80px;
                 top: -15px;
             }
 
-            .premium-card {
+            .dte-card {
                 padding: 30px 25px;
             }
 
@@ -536,23 +450,20 @@
                 font-size: 18px;
             }
 
-            .stat-number {
-                font-size: 48px;
-            }
         }
 
         @media (max-width: 576px) {
-            .philosophy-quote {
+            .dte-quote {
                 font-size: 23px;
                 padding-left: 30px;
             }
 
-            .premium-heading {
+            .dte-title {
                 font-size: 28px;
             }
 
-            .feature-grid,
-            .product-grid {
+            .dte-feature,
+            .dte-product {
                 grid-template-columns: 1fr;
             }
 
@@ -608,17 +519,17 @@
         <div class="main-content ">
 
 
-            <section class="tf-section premium-section philosophy-bg flat-spacing-2">
+            <section class="tf-section dte-section dte-section--philosophy flat-spacing-2">
                 <div class="tf-container w-1290">
                     <div class="row align-items-center">
 
                         <div class="col-lg-6 mb-5 mb-lg-0">
                             <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                <h2 class="philosophy-quote">
+                                <h2 class="dte-quote">
                                     NURTURING FARMS & NOURISHING PEOPLE
                                 </h2>
 
-                                <p class="premium-text">
+                                <p class="dte-text">
                                     Down to Earth label is a vision of the single largest Organic farmer support
                                     programme in the world by Morarka Organic. Spanning 20 years, we've helped farmers
                                     across India embrace a sustainable future by nurturing 2,50,000 acres of land under
@@ -626,7 +537,7 @@
                                     sustainable life for the farmer.
                                 </p>
 
-                                <p class="premium-text">
+                                <p class="dte-text">
                                     Down to Earth label has over 300 plus varieties of wholesome, better tasting food.
                                     Nourished by nature, our food has natural nutrients that can keep you energized so
                                     that you can have a better day, every day.
@@ -646,32 +557,32 @@
 
 
             <!-- ===== FEATURE GRID ===== -->
-            <section class="tf-section premium-section flat-spacing-2">
+            <section class="tf-section dte-section flat-spacing-2">
                 <div class="tf-container w-1290">
-                    <div class="feature-grid">
+                    <div class="dte-feature">
 
-                        <div class="feature-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-icon">
+                        <div class="dte-feature-item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="dte-feature--icon">
                                 <i class="fas fa-seedling"></i>
                             </div>
-                            <h3 class="feature-title">Pure Organic Cultivation</h3>
+                            <h3 class="dte-feature--title">Pure Organic Cultivation</h3>
                             <p>Traditional farming methods that respect nature's balance and preserve nutritional
                                 integrity</p>
                         </div>
 
-                        <div class="feature-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="feature-icon">
+                        <div class="dte-feature-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="dte-feature--icon">
                                 <i class="fas fa-hand-holding-heart"></i>
                             </div>
-                            <h3 class="feature-title">Chemical-Free Assurance</h3>
+                            <h3 class="dte-feature--title">Chemical-Free Assurance</h3>
                             <p>Complete elimination of synthetic fertilizers, pesticides, and harmful chemicals</p>
                         </div>
 
-                        <div class="feature-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-icon">
+                        <div class="dte-feature-item wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="dte-feature--icon">
                                 <i class="fas fa-leaf"></i>
                             </div>
-                            <h3 class="feature-title">Sustainable Harmony</h3>
+                            <h3 class="dte-feature--title">Sustainable Harmony</h3>
                             <p>Creating balance between agricultural practices and environmental preservation</p>
                         </div>
 
@@ -685,27 +596,27 @@
 
 
             <!-- ===== RETAIL JOURNEY ===== -->
-            <section class="tf-section premium-section retail-bg flat-spacing-2">
+            <section class="tf-section dte-section dte-section--retail flat-spacing-2">
                 <div class="tf-container w-1290">
-                    <div class="premium-card wow fadeInUp">
-                        <h2 class="premium-heading">From Farm to Retail - Down to Earth</h2>
+                    <div class="dte-card wow fadeInUp">
+                        <h2 class="dte-title">From Farm to Retail - Down to Earth</h2>
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <p class="premium-text">
-                                    From being in the back end of the value chain for <span class="accent-text">over 10
+                                <p class="dte-text">
+                                    From being in the back end of the value chain for <span class="dte-highlight">over 10
                                         years</span>, Morarka Organic Foods Limited has now got into the front end,
                                     i.e., retailing of certified organic products under its own brand <span
-                                        class="accent-text">'Down to Earth'</span>.
+                                        class="dte-highlight">'Down to Earth'</span>.
                                 </p>
                             </div>
 
                             <div class="col-lg-6">
-                                <p class="premium-text">
-                                    While this initiative is expected to provide <span class="accent-text">direct
+                                <p class="dte-text">
+                                    While this initiative is expected to provide <span class="dte-highlight">direct
                                         linkages</span> to the thousands of certified organic producers, it will also
                                     enable quality conscious consumers to access the very best quality of food deserved
-                                    by them at <span class="accent-text">reasonable prices</span>.
+                                    by them at <span class="dte-highlight">reasonable prices</span>.
                                 </p>
                             </div>
                         </div>
@@ -713,21 +624,21 @@
                         <div class="text-center mt-5">
                             <div class="row justify-content-center">
                                 <div class="col-auto">
-                                    <div class="feature-icon" style="width: 70px; height: 70px;">
+                                    <div class="dte-feature--icon" style="width: 70px; height: 70px;">
                                         <i class="fas fa-tractor"></i>
                                     </div>
                                     <p style="margin-top: 15px; font-weight: 600; color: var(--Text-7);">Organic Farms
                                     </p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="feature-icon" style="width: 70px; height: 70px;">
+                                    <div class="dte-feature--icon" style="width: 70px; height: 70px;">
                                         <i class="fas fa-certificate"></i>
                                     </div>
                                     <p style="margin-top: 15px; font-weight: 600; color: var(--Text-7);">Quality
                                         Certified</p>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="feature-icon" style="width: 70px; height: 70px;">
+                                    <div class="dte-feature--icon" style="width: 70px; height: 70px;">
                                         <i class="fas fa-store"></i>
                                     </div>
                                     <p style="margin-top: 15px; font-weight: 600; color: var(--Text-7);">Direct to
@@ -761,7 +672,7 @@
             </section>
 
             <!-- ===== GLOBAL REVOLUTION ===== -->
-            <section class="tf-section premium-section revolution-bg flat-spacing-2">
+            <section class="tf-section dte-section dte-section-revolution flat-spacing-2">
                 <div class="tf-container w-1290">
                     <div class="row align-items-center">
 
@@ -772,18 +683,18 @@
                         </div>
 
                         <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-                            <h2 class="premium-heading">India's Answer to the Global Organic Revolution</h2>
+                            <h2 class="dte-title">India's Answer to the Global Organic Revolution</h2>
 
-                            <p class="premium-text">
-                                Down to Earth is expected to be <span class="accent-text">India's answer</span> to the
+                            <p class="dte-text">
+                                Down to Earth is expected to be <span class="dte-highlight">India's answer</span> to the
                                 global organic revolution. It is dedicated to bringing people back to the organic way of
                                 life.
                             </p>
 
-                            <p class="premium-text">
-                                Down to Earth provides <span class="accent-text">large range</span> of food products-
+                            <p class="dte-text">
+                                Down to Earth provides <span class="dte-highlight">large range</span> of food products-
                                 cereals, pulses, spices, condiments, fruits, vegetables, oils, dairy products,
-                                Ready-To-Eat snacks and much more-amounting to almost <span class="accent-text">90
+                                Ready-To-Eat snacks and much more-amounting to almost <span class="dte-highlight">90
                                     percent</span> of the Indian kitchen grocery.
                             </p>
                         </div>
@@ -794,40 +705,40 @@
 
 
             <!-- ===== PRODUCTS SHOWCASE ===== -->
-            <section class="tf-section premium-section products-bg flat-spacing-2">
+            <section class="tf-section dte-section products-bg flat-spacing-2">
                 <div class="tf-container w-1290">
-                    <h2 class="premium-heading text-center mb-5 wow fadeInUp">Our Premium Organic Collection</h2>
+                    <h2 class="dte-title text-center mb-5 wow fadeInUp">Our Premium Organic Collection</h2>
 
-                    <div class="product-grid">
-                        <div class="product-card wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="product-icon">
+                    <div class="dte-product">
+                        <div class="dte-product__item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="dte-product__icon">
                                 <i class="fas fa-spa"></i>
                             </div>
-                            <h3 class="product-title">Cereals & Grains</h3>
+                            <h3 class="dte-product--title">Cereals & Grains</h3>
                             <p>Nutrient-rich staples for wholesome meals</p>
                         </div>
 
-                        <div class="product-card wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="product-icon">
+                        <div class="dte-product__item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="dte-product__icon">
                                 <i class="fas fa-pepper-hot"></i>
                             </div>
-                            <h3 class="product-title">Spices & Condiments</h3>
+                            <h3 class="dte-product--title">Spices & Condiments</h3>
                             <p>Aromatic flavors from organic cultivation</p>
                         </div>
 
-                        <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="product-icon">
+                        <div class="dte-product__item wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="dte-product__icon">
                                 <i class="fas fa-apple-alt"></i>
                             </div>
-                            <h3 class="product-title">Fruits & Vegetables</h3>
+                            <h3 class="dte-product--title">Fruits & Vegetables</h3>
                             <p>Fresh produce, naturally grown</p>
                         </div>
 
-                        <div class="product-card wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="product-icon">
+                        <div class="dte-product__item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="dte-product__icon">
                                 <i class="fas fa-oil-can"></i>
                             </div>
-                            <h3 class="product-title">Oils & Dairy</h3>
+                            <h3 class="dte-product--title">Oils & Dairy</h3>
                             <p>Pure essentials for healthy cooking</p>
                         </div>
                     </div>
@@ -839,7 +750,222 @@
 
 
         <!-- ===== FOOTER ===== -->
-        <div id="site-footer"></div>
+        <div class="footer" id="footer-main">
+            <div class="tf-container w-1290">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-top">
+                            <div class="footer-left">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="images/logo/morarka_logo-new.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-center">
+                                <p class="font-snowfall">
+                                    Growing Organically, Serving Naturally!
+                                </p>
+                            </div>
+                            <div class="footer-right">
+                                <div class="wg-social">
+                                    <ul class="list">
+                                        <li class="item">
+                                            <a href="#"><i class="icon-facebook1"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-twitter"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-instagram2"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-inner">
+                <div class="tf-container w-1290">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 ">
+                            <div class="footer-inner-wrap footer-col-block">
+                                <h4 class="footer-title footer-title-desktop mb-23">
+                                    About Us!
+                                </h4>
+                                <h4 class="footer-title footer-title-mobile mb-23">
+                                    About Us!
+                                </h4>
+                                <ul class="contact-list tf-collapse-content">
+                                    <li>
+
+                                        <p class="address">
+                                            Morarka Organic Foods Limited promotes sustainable, chemical-<br>
+                                            -free farming across 19+ states with 1,00,000+ farmers.
+                                        </p>
+                                    </li>
+                                    <li>
+
+                                        <p class="phone-number fs-15">
+                                            We offer a wide range of certified organic products —<br>
+                                            from cereals and pulses to spices and fresh produce <br>
+                                            bringing natural goodness from farms to your home.
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 ">
+                            <div class="footer-inner-wrap footer-col-block">
+                                <h4 class="footer-title footer-title-desktop mb-23">
+                                    Contact Us!
+                                </h4>
+                                <h4 class="footer-title footer-title-mobile mb-23">
+                                    Contact Us!
+                                </h4>
+                                <ul class="contact-list tf-collapse-content">
+                                    <li>
+                                        <i class="fa-solid fa-location-dot fs-17"></i>
+                                        <p class="address">
+                                            Vatika Road, Off Tonk Road,
+                                            Jaipur-303905
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <p class="phone-number fs-15">
+                                            Call us: 0141-2942398
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <i class="icon-package-box"></i>
+                                        <p class="email fs-15">
+                                            Mail: support@morarkamail.org
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-clock"></i>
+                                        <p class="time-open fs-15">
+                                            Mon - Sat: 8.00am - 18.00pm
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 ">
+                            <div class="footer-inner-wrap footer-col-block">
+                                <h4 class="footer-title footer-title-desktop mb-28">
+                                    Quick Links
+                                </h4>
+                                <h4 class="footer-title footer-title-mobile mb-28">
+                                    Quick Links
+                                </h4>
+                                <ul class="link-list tf-collapse-content">
+                                    <li class="item">
+
+                                        <a href="Business_Tieup.html">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                            Collaborations and Enquiries
+                                        </a>
+                                    </li>
+                                    <li class="item">
+
+                                        <a href="for_you_and_your_family.html">
+
+                                            <i class="fa-solid fa-arrow-right"></i>
+
+                                            Why Organic</a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="media.html">
+                                            <i class="fa-solid fa-arrow-right"></i>
+
+                                            Gallery and Events </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="https://www.downtoearthorganicfood.com/">
+                                            <i class="fa-solid fa-arrow-right"></i>
+
+                                            Shop Now</a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="contact-us.html">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                            Meet Our Team</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+
+
+                            <div class="footer-inner-wrap footer-col-block">
+                                <h4 class="footer-title footer-title-desktop mb-23">
+                                    News Posts
+                                </h4>
+                                <h4 class="footer-title footer-title-mobile mb-23">
+                                    News Posts
+                                </h4>
+                                <ul class="new-post-list tf-collapse-content">
+                                    <li class="item img-hover">
+                                        <div class="image hover-item">
+                                            <img src="images/item/16.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <a href="javascript:void(0)" class="title-post hover-text-secondary">
+                                                Learn 10 Best Tips for New
+                                                Formers
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                    <li class="item img-hover">
+                                        <div class="image hover-item">
+                                            <img src="images/item/17.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <a href="javascript:void(0)" class="title-post hover-text-secondary">
+                                                Farmer Sentiment Darkens
+                                                Hopes Fade
+                                            </a>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tf-container w-1290">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-bottom">
+                            <p class="no-copy font-nunito">
+                                Copyright © 2009 Morarka Organic Foods Limited All Rights Reserved.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-item item-1">
+                <img src="images/item/grass-2.png" alt="">
+            </div>
+            <div class="img-item item-2">
+
+                <div class="  scroll-element-3">
+                    <img class="wow zoomIn" src="images/item/silo.png" alt="">
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -897,7 +1023,7 @@
         // Initialize animations
         new WOW().init();
     </script>
-    <script type="text/javascript" src="js/footer_load.js"></script>
+    
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
