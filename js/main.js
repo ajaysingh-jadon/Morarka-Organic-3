@@ -47,21 +47,35 @@
                 $(".mobile-nav-wrap").toggleClass("active");
                 $("body").toggleClass("no-scroll");
             });
+
             $(".mobile-nav-close").on("click", () => {
                 $(".mobile-nav-wrap").toggleClass("active");
                 $("body").toggleClass("no-scroll");
             });
 
-            $(document).on("click", ".menu-item-has-children-mobile", function () {
-                var args = { duration: 200 };
-                if ($(this).hasClass("active")) {
-                    $(this).children(".sub-menu-mobile").slideUp(args);
-                    $(this).removeClass("active");
-                } else {
-                    $(".sub-menu-mobile").slideUp(args);
-                    $(this).children(".sub-menu-mobile").slideDown(args);
-                    $(".menu-item-has-children-mobile").removeClass("active");
-                    $(this).addClass("active");
+            // FIX: Use direct binding after fetch, not document delegation
+            $(document).off("click", ".menu-item-has-children-mobile").on("click", ".menu-item-has-children-mobile > .item-menu-mobile", function (e) {
+                
+                let $parent = $(this).closest(".menu-item-has-children-mobile");
+                let $submenu = $parent.children(".sub-menu-mobile");
+                
+                // Only prevent default if this item HAS a submenu
+                if ($submenu.length) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    let args = { duration: 200 };
+
+                    if ($parent.hasClass("active")) {
+                        $parent.removeClass("active");
+                        $submenu.slideUp(args);
+                    } else {
+                        $(".menu-item-has-children-mobile").removeClass("active");
+                        $(".sub-menu-mobile").slideUp(args);
+
+                        $parent.addClass("active");
+                        $submenu.slideDown(args);
+                    }
                 }
             });
         }
@@ -590,24 +604,27 @@
         },
     };
 
-//     var footer = function () {
-//     $(document).on("click", ".footer-title-mobile", function () {
-//         const $parent = $(this).closest(".footer-col-block");
-//         const $content = $(this).next();
+    var footer = function () {
+    if ($(".footer-title-mobile").length) {
+        $(".footer-title-mobile").on("click", function () {
+            let $this = $(this);
+            let $content = $this.next(".tf-collapse-content");
 
-//         $parent.toggleClass("open");
+            if ($this.hasClass("active")) {
+                $this.removeClass("active");
+                $content.slideUp(200);
+            } else {
+                $(".footer-title-mobile").removeClass("active");
+                $(".tf-collapse-content").slideUp(200);
 
-//         if ($parent.hasClass("open")) {
-//             $content.stop(true, true).slideDown(250);
-//         } else {
-//             $content.stop(true, true).slideUp(250);
-//         }
-//     });
-// };
-
-var footer = function () {
-    // Handled by footer-loader.js after async inject
+                $this.addClass("active");
+                $content.slideDown(200);
+            }
+        });
+    }
 };
+
+
 
     var popupProduct = function () {
         $(window).on("scroll", function () {
@@ -855,7 +872,6 @@ var footer = function () {
     // Dom Ready
     $(function () {
         videoWrap();
-        openNavMobile();
         openWelcome();
         btnQuantity();
         tabs();
